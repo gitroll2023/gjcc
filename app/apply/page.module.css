@@ -1,0 +1,304 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Notice Section */
+.noticeSection {
+  margin-bottom: 40px;
+}
+
+.notice {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.notice h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #856404;
+  margin-bottom: 15px;
+}
+
+.notice ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notice li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: #856404;
+  line-height: 1.6;
+}
+
+.notice li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Filter Section */
+.filterSection {
+  margin-bottom: 40px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filterBtn {
+  padding: 12px 30px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filterBtn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Programs Section */
+.programsSection {
+  margin-bottom: 80px;
+}
+
+.programsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.programCard {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.programCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.programHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.categoryBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.categoryBadge svg {
+  color: #667eea;
+}
+
+.statusBadge {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.recruiting {
+  background: #d4edda;
+  color: #155724;
+}
+
+.closed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.completed {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.programTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.instructor {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.programInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.infoItem svg {
+  color: #667eea;
+  font-size: 12px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.programFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fee {
+  font-size: 18px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.applyButton {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.applyButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.applyButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Help Section */
+.helpSection {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 60px;
+  text-align: center;
+}
+
+.helpSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.helpCard {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.helpCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.helpCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.helpCard p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .programsList {
+    grid-template-columns: 1fr;
+  }
+
+  .helpGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterButtons {
+    flex-wrap: wrap;
+  }
+
+  .programInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .helpSection {
+    padding: 40px 20px;
+  }
+}

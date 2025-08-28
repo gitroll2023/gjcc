@@ -1,0 +1,48 @@
+# robots.txt for 광주문화진흥센터
+# https://gjcc.kr
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow specific crawlers full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Naver
+Allow: /
+
+User-agent: Daum
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl-delay for respectful crawling
+User-agent: *
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://gjcc.kr/sitemap.xml

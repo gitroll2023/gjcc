@@ -1,0 +1,181 @@
+.floatingNav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.floatingNav.visible {
+  opacity: 1;
+}
+
+.quickMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.quickItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.quickItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--item-color);
+  transition: width 0.3s ease;
+}
+
+.quickItem:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--item-color);
+}
+
+.quickItem:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.iconWrapper {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+}
+
+.quickItem:hover .iconWrapper {
+  background: linear-gradient(135deg, var(--item-color) 0%, var(--item-color) 100%);
+}
+
+.itemName {
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  white-space: pre-line;
+  line-height: 1.2;
+  z-index: 1;
+  position: relative;
+}
+
+.topButton {
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(30, 58, 95, 0.3);
+  margin-top: 10px;
+  align-self: center;
+}
+
+.topButton:hover {
+  background: var(--sub-color);
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 187, 51, 0.4);
+}
+
+.topButton svg {
+  font-size: 16px;
+}
+
+.topButton span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* 작은 화면에서 간단하게 표시 */
+@media (max-width: 1199px) {
+  .floatingNav {
+    right: 10px;
+  }
+  
+  .quickMenu {
+    padding: 5px;
+  }
+  
+  .quickItem {
+    min-width: auto;
+    padding: 10px;
+  }
+  
+  .itemName {
+    display: none;
+  }
+  
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 모바일에서는 하단에 표시 */
+@media (max-width: 767px) {
+  .floatingNav {
+    position: fixed;
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  .quickMenu {
+    flex-direction: row;
+    padding: 5px;
+  }
+  
+  .quickItem {
+    padding: 8px;
+    min-width: auto;
+  }
+  
+  .topButton {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}

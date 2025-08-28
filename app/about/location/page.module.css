@@ -1,0 +1,338 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.content {
+  padding: 80px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-family: var(--font-formal);
+}
+
+.locationInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.addressSection {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.infoCard {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #495057;
+  min-width: 100px;
+}
+
+.value {
+  font-weight: 500;
+  color: #2c3e50;
+  text-align: right;
+}
+
+.mapSection {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1976d2;
+  font-weight: 600;
+  text-align: center;
+  gap: 10px;
+}
+
+.transportSection {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+.transportGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.transportCard {
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transportCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.transportIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.transportCard h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.transportInfo {
+  text-align: left;
+}
+
+.busInfo {
+  margin-bottom: 15px;
+}
+
+.busInfo strong {
+  color: #4facfe;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.busInfo p {
+  color: #495057;
+  margin: 0;
+}
+
+.stopInfo {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 0 8px 8px 0;
+}
+
+.directions {
+  margin-bottom: 15px;
+}
+
+.directions strong {
+  color: #4facfe;
+}
+
+.walkInfo {
+  background: #d1ecf1;
+  border-left: 4px solid #17a2b8;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 0 8px 8px 0;
+}
+
+.parkingSection {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+.parkingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.parkingCard {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(25, 135, 84, 0.1) 100%);
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parkingCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.parkingCard h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #198754;
+  margin-bottom: 20px;
+}
+
+.parkingInfo p {
+  color: #495057;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.facilitiesSection {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.facilityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(108, 117, 125, 0.1) 0%, rgba(73, 80, 87, 0.1) 100%);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facilityItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.facilityIcon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.facilityItem span {
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .locationInfo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .transportGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .parkingGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 15px;
+  }
+  
+  .content {
+    padding: 40px 0;
+  }
+  
+  .addressSection,
+  .mapSection,
+  .transportSection,
+  .parkingSection,
+  .facilitiesSection {
+    padding: 30px;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+  
+  .transportCard,
+  .parkingCard {
+    padding: 20px;
+  }
+  
+  .facilitiesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .facilityItem {
+    padding: 20px 15px;
+  }
+  
+  .facilityIcon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addressSection,
+  .mapSection,
+  .transportSection,
+  .parkingSection,
+  .facilitiesSection {
+    padding: 20px;
+  }
+  
+  .infoCard {
+    padding: 20px;
+  }
+  
+  .infoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .value {
+    text-align: left;
+  }
+  
+  .facilitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}

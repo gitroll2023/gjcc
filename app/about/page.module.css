@@ -1,0 +1,322 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Introduction Section */
+.introSection {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.introSection h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+  font-family: var(--font-formal);
+}
+
+.introText {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Mission & Vision Section */
+.missionSection {
+  margin-bottom: 80px;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.missionCard, .visionCard {
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.missionCard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.visionCard {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.missionCard h3, .visionCard h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--font-formal);
+}
+
+.missionCard p, .visionCard p {
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* Core Values Section */
+.valuesSection {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 60px;
+  margin-bottom: 80px;
+}
+
+.valuesSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: var(--font-formal);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.valueCard {
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  padding: 40px 30px;
+  transition: all 0.3s;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.valueIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+}
+
+.valueCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.valueCard p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* History Timeline */
+.historySection {
+  margin-bottom: 80px;
+}
+
+.historySection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: var(--font-formal);
+}
+
+.timeline {
+  position: relative;
+  padding: 0 20px;
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.timelineDate {
+  flex: 0 0 150px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timelineContent {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.timelineContent h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.timelineContent p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Quick Links Section */
+.linksSection {
+  margin-bottom: 80px;
+}
+
+.linksSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.linkCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.linkContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.linkContent p {
+  font-size: 15px;
+  color: #666;
+}
+
+.linkArrow {
+  font-size: 20px;
+  color: #667eea;
+  transition: transform 0.3s;
+}
+
+.linkCard:hover .linkArrow {
+  transform: translateX(5px);
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 25px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+.ctaSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-formal);
+}
+
+.ctaSection p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 40px;
+  background: white;
+  color: #667eea;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .missionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .introSection h2 {
+    font-size: 28px;
+  }
+
+  .valuesSection {
+    padding: 40px 20px;
+  }
+
+  .ctaSection {
+    padding: 40px 20px;
+  }
+}

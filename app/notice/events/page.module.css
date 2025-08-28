@@ -1,0 +1,418 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.content {
+  padding: 80px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  align-items: end;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filterGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.filterSelect {
+  padding: 10px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #495057;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.searchGroup {
+  display: flex;
+  margin-left: auto;
+  min-width: 300px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px 0 0 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #667eea;
+}
+
+.searchButton {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 0 8px 8px 0;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.searchButton:hover {
+  opacity: 0.9;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.eventCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px 15px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.eventMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoryIcon {
+  font-size: 20px;
+}
+
+.categoryText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.eventContent {
+  padding: 20px 25px;
+}
+
+.eventTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.eventDescription {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailIcon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.detailText {
+  font-size: 14px;
+  color: #495057;
+  flex: 1;
+}
+
+.participantInfo {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.participantText {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.participantBar {
+  width: 100%;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.participantProgress {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.eventActions {
+  display: flex;
+  gap: 10px;
+  padding: 20px 25px;
+  border-top: 1px solid #f1f3f4;
+}
+
+.detailButton {
+  flex: 1;
+  padding: 12px 20px;
+  background: #f8f9fa;
+  color: #495057;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.detailButton:hover {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+
+.applyButton {
+  flex: 1;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.applyButton:hover {
+  opacity: 0.9;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.quickInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.infoCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.infoCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoCard li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+}
+
+.infoCard li:before {
+  content: '•';
+  color: #667eea;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.contactInfo strong {
+  color: #2c3e50;
+  min-width: 80px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .eventsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  
+  .quickInfo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 15px;
+  }
+  
+  .content {
+    padding: 40px 0;
+  }
+  
+  .filters {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .searchGroup {
+    margin-left: 0;
+    min-width: auto;
+  }
+  
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .eventCard {
+    margin: 0;
+  }
+  
+  .eventHeader,
+  .eventContent,
+  .eventActions {
+    padding: 15px 20px;
+  }
+  
+  .eventTitle {
+    font-size: 18px;
+  }
+  
+  .eventDescription {
+    -webkit-line-clamp: 2;
+  }
+  
+  .infoCard {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    padding: 15px;
+  }
+  
+  .filterGroup {
+    width: 100%;
+  }
+  
+  .filterSelect,
+  .searchInput,
+  .searchButton {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .eventHeader,
+  .eventContent,
+  .eventActions {
+    padding: 12px 15px;
+  }
+  
+  .eventActions {
+    flex-direction: column;
+  }
+  
+  .detailButton,
+  .applyButton {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .participantInfo {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,491 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Banner Section */
+.bannerSection {
+  margin-bottom: 60px;
+}
+
+.importantBanner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.bannerIcon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.bannerContent {
+  flex: 1;
+}
+
+.bannerContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bannerContent p {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.bannerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  background: white;
+  color: #ee5a24;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.bannerLink:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Section */
+.statsSection {
+  margin-bottom: 80px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.statCard {
+  background: white;
+  border-radius: 15px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.statCard h3 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.statNumber {
+  font-size: 42px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Notices Section */
+.noticesSection {
+  margin-bottom: 80px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sectionHeader h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  font-family: var(--font-formal);
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.3s;
+}
+
+.viewAllLink:hover {
+  gap: 10px;
+}
+
+/* Filter Buttons */
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filterBtn {
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filterBtn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Notices List */
+.noticesList {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.noticeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.noticeItem:last-child {
+  border-bottom: none;
+}
+
+.noticeItem:hover {
+  background: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.noticeLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.noticeCategory {
+  padding: 5px 12px;
+  background: #667eea;
+  color: white;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.eventCategory {
+  background: #f093fb;
+}
+
+.importantBadge {
+  padding: 5px 12px;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.noticeTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.noticeRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.noticeDate {
+  font-size: 14px;
+  color: #999;
+}
+
+.noticeViews {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Events Section */
+.eventsSection {
+  margin-bottom: 80px;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.eventCard {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.eventCategory {
+  padding: 5px 12px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.eventStatus {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recruiting {
+  background: #d4edda;
+  color: #155724;
+}
+
+.upcoming {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.ongoing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.eventTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.eventDate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.eventLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.3s;
+}
+
+.eventLink:hover {
+  gap: 10px;
+}
+
+/* Links Section */
+.linksSection {
+  margin-bottom: 80px;
+}
+
+.linksSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.linkCard {
+  display: block;
+  padding: 40px 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.linkCard:hover {
+  background: white;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.linkIcon {
+  font-size: 40px;
+  color: #667eea;
+  margin-bottom: 20px;
+}
+
+.linkCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.linkCard p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 25px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+.newsletterSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-formal);
+}
+
+.newsletterSection p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.newsletterButton {
+  padding: 15px 35px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletterButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .importantBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .noticeItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .noticeLeft {
+    flex-wrap: wrap;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .newsletterSection {
+    padding: 40px 20px;
+  }
+}

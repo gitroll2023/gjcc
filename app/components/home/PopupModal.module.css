@@ -1,0 +1,201 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, var(--main-color) 0%, #3a5a8f 100%);
+}
+
+.modalTitle {
+  font-family: var(--font-section);
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg);
+}
+
+.swiperContainer {
+  height: 400px;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Swiper Custom Styles */
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.swiperContainer :global(.swiper-button-next:hover),
+.swiperContainer :global(.swiper-button-prev:hover) {
+  background: var(--main-color);
+}
+
+.swiperContainer :global(.swiper-button-next::after),
+.swiperContainer :global(.swiper-button-prev::after) {
+  font-size: 16px;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet) {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background: var(--sub-color);
+  opacity: 1;
+}
+
+.modalFooter {
+  padding: 20px 30px;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+}
+
+.totalCount {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.totalCount strong {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.footerButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.todayCloseButton,
+.confirmButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.todayCloseButton {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+}
+
+.todayCloseButton:hover {
+  background: #f0f0f0;
+}
+
+.confirmButton {
+  background: var(--main-color);
+  color: #fff;
+  padding: 10px 30px;
+}
+
+.confirmButton:hover {
+  background: var(--sub-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 187, 51, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .modalContent {
+    max-width: 95%;
+    max-height: 90vh;
+  }
+  
+  .swiperContainer {
+    height: 300px;
+  }
+  
+  .modalHeader {
+    padding: 15px 20px;
+  }
+  
+  .modalFooter {
+    padding: 15px 20px;
+  }
+  
+  .footerButtons {
+    flex-direction: column;
+  }
+  
+  .todayCloseButton {
+    width: 100%;
+  }
+}

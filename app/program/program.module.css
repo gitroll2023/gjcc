@@ -1,0 +1,344 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Intro Section */
+.introSection {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.introSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+  font-family: var(--font-formal);
+}
+
+.introSection p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.featuresSection {
+  margin-bottom: 80px;
+}
+
+.featuresSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.featureCard:hover {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 40px;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.featureCard h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Programs Section */
+.programsSection {
+  margin-bottom: 60px;
+}
+
+.programsSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.programsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.programCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s;
+}
+
+.programCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.programHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.programHeader h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.levelBadge, .priceBadge, .typeBadge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.priceBadge {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.typeBadge {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.programDescription {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.programInfo {
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.infoItem svg {
+  color: #667eea;
+}
+
+.label {
+  font-weight: 600;
+  color: #444;
+}
+
+.applyButton {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.applyButton:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Notice Section */
+.noticeSection {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.noticeSection h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.noticeSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.noticeSection li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.noticeSection li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Venue Section */
+.venueSection {
+  margin-bottom: 60px;
+}
+
+.venueSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.venueGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.venueCard {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.venueCard h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.venueCard p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.ctaSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-formal);
+}
+
+.ctaSection p {
+  font-size: 17px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 40px;
+  background: white;
+  color: #667eea;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .programsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .venueGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .programsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .venueGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .introSection h2 {
+    font-size: 28px;
+  }
+  
+  .ctaSection {
+    padding: 30px 20px;
+  }
+}

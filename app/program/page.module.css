@@ -1,0 +1,394 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Intro Section */
+.introSection {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.introSection h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+  font-family: var(--font-formal);
+}
+
+.introSection p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Programs Section */
+.programsSection {
+  margin-bottom: 100px;
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.programCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.programCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #667eea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  padding: 30px;
+}
+
+.cardContent h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+  font-family: var(--font-formal);
+}
+
+.description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.features {
+  margin-bottom: 25px;
+}
+
+.features h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: #666;
+}
+
+.features li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cardLink:hover {
+  gap: 15px;
+  color: #764ba2;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.cardLink:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Schedule Section */
+.scheduleSection {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 60px;
+  margin-bottom: 80px;
+}
+
+.scheduleSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.calendar {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calendarHeader {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.calendarHeader h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scheduleItem {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.scheduleItem:hover {
+  background: #f0f0f0;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+}
+
+.day {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.weekday {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.scheduleInfo h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.scheduleInfo p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Info Section */
+.infoSection {
+  margin-bottom: 80px;
+}
+
+.infoSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.infoCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+.infoCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.infoCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.infoCard li {
+  padding: 10px 0;
+  font-size: 15px;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.infoCard li:last-child {
+  border-bottom: none;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 25px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+.ctaSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-formal);
+}
+
+.ctaSection p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ctaButton, .ctaButtonOutline {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.ctaButton {
+  background: white;
+  color: #667eea;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButtonOutline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.ctaButtonOutline:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .programGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .introSection h2 {
+    font-size: 28px;
+  }
+
+  .scheduleSection {
+    padding: 40px 20px;
+  }
+
+  .scheduleItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton, .ctaButtonOutline {
+    width: 100%;
+    max-width: 280px;
+  }
+}

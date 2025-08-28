@@ -1,0 +1,154 @@
+.mainVisual {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  margin-top: 120px; /* Account for fixed header (topBar 40px + header 80px) */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.textWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  animation: fadeInUp 1s ease-out;
+}
+
+.subTitle {
+  font-family: var(--font-soft);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.mainTitle {
+  font-family: var(--font-title);
+  font-size: 56px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  font-family: var(--font-main);
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Swiper Custom Styles */
+.mainVisual :global(.swiper-pagination) {
+  bottom: 40px !important;
+}
+
+.mainVisual :global(.swiper-pagination-bullet) {
+  width: 60px !important;
+  height: 30px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 15px !important;
+  color: #fff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin: 0 5px !important;
+  opacity: 1 !important;
+  transition: all 0.3s !important;
+}
+
+.mainVisual :global(.swiper-pagination-bullet-active) {
+  background: var(--sub-color) !important;
+  border-color: var(--sub-color) !important;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .mainVisual {
+    height: 600px;
+    margin-top: 100px;
+  }
+  
+  .mainTitle {
+    font-size: 42px;
+  }
+  
+  .subTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainVisual {
+    height: 500px;
+    margin-top: 90px;
+  }
+  
+  .mainTitle {
+    font-size: 32px;
+  }
+  
+  .subTitle {
+    font-size: 18px;
+  }
+  
+  .description {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .mainVisual {
+    height: 400px;
+  }
+  
+  .mainTitle {
+    font-size: 26px;
+  }
+  
+  .subTitle {
+    font-size: 16px;
+  }
+}
