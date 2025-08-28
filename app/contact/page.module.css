@@ -334,45 +334,281 @@
   transform: translateY(-3px);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive Design */
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 50px 20px;
+  }
+
   .contactGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .contactCard {
+    padding: 35px 18px;
+  }
+
+  .contactIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .contactCard h3 {
+    font-size: 16px;
+  }
+
+  .contactMain {
+    font-size: 18px;
   }
 
   .optionsGrid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .optionCard {
+    padding: 35px;
   }
 
   .departmentGrid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .departmentSection {
+    padding: 50px 40px;
   }
 
   .mapContainer {
     grid-template-columns: 1fr;
   }
+
+  .mapInfo {
+    padding: 35px;
+  }
+
+  .ctaSection {
+    padding: 50px 40px;
+  }
 }
 
-@media (max-width: 768px) {
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .quickContactSection {
+    margin-bottom: 50px;
+  }
+
   .contactGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contactCard {
+    padding: 30px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .contactIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .contactCard h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contactMain {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .contactSub {
+    font-size: 13px;
+  }
+
+  .optionsSection {
+    margin-bottom: 50px;
+  }
+
+  .optionsSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .optionCard {
+    padding: 30px 25px;
+  }
+
+  .optionHeader h3 {
+    font-size: 20px;
+  }
+
+  .optionCard p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .optionFeatures li {
+    font-size: 14px;
+    padding: 8px 0;
   }
 
   .departmentSection {
     padding: 40px 20px;
+    margin-bottom: 50px;
+  }
+
+  .departmentSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .departmentGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .departmentCard {
+    padding: 25px 20px;
+  }
+
+  .departmentCard h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .departmentInfo p {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .mapSection {
+    margin-bottom: 50px;
+  }
+
+  .mapSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .mapContainer {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .mapPlaceholder {
+    min-height: 250px;
+    font-size: 16px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .mapInfo {
+    padding: 30px 25px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .mapInfo h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .address {
+    font-size: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+
+  .transportInfo {
+    gap: 20px;
+  }
+
+  .transportItem h4 {
+    font-size: 15px;
+  }
+
+  .transportItem p {
+    font-size: 13px;
   }
 
   .ctaSection {
     padding: 40px 20px;
   }
 
+  .ctaSection h2 {
+    font-size: 28px;
+  }
+
+  .ctaSection p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
   .ctaButtons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .ctaButton, .ctaButtonOutline {
     width: 100%;
     max-width: 280px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 10px;
+  }
+
+  .contactCard {
+    padding: 25px 15px;
+  }
+
+  .contactMain {
+    font-size: 16px;
+  }
+
+  .optionCard {
+    padding: 25px 20px;
+  }
+
+  .departmentSection {
+    padding: 30px 15px;
+  }
+
+  .departmentCard {
+    padding: 20px 15px;
+  }
+
+  .mapInfo {
+    padding: 25px 20px;
+  }
+
+  .ctaSection {
+    padding: 30px 15px;
+  }
+
+  .ctaButton, .ctaButtonOutline {
+    max-width: 250px;
   }
 }

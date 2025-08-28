@@ -351,44 +351,213 @@
   transform: translateY(-3px);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive Design */
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 50px 20px;
+  }
+
   .programGrid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .programCard {
+    margin-bottom: 0;
+  }
+
+  .cardContent {
+    padding: 25px;
+  }
+
+  .cardContent h3 {
+    font-size: 22px;
+  }
+
+  .scheduleSection {
+    padding: 50px 40px;
   }
 
   .infoGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .ctaSection {
+    padding: 50px 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .introSection {
+    margin-bottom: 50px;
+  }
+
   .introSection h2 {
     font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .introSection p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .programsSection {
+    margin-bottom: 60px;
+  }
+
+  .programGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .programCard {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .cardHeader {
+    height: 150px;
+  }
+
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .cardContent {
+    padding: 25px 20px;
+  }
+
+  .cardContent h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .features h4 {
+    font-size: 13px;
+  }
+
+  .features li {
+    font-size: 13px;
+  }
+
+  .cardLink {
+    font-size: 14px;
   }
 
   .scheduleSection {
     padding: 40px 20px;
+    margin-bottom: 50px;
+  }
+
+  .scheduleSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .calendar {
+    padding: 25px 20px;
+  }
+
+  .calendarHeader h3 {
+    font-size: 18px;
   }
 
   .scheduleItem {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .date {
+    min-width: 50px;
+    height: 50px;
+  }
+
+  .day {
+    font-size: 18px;
+  }
+
+  .weekday {
+    font-size: 11px;
+  }
+
+  .scheduleInfo h4 {
+    font-size: 15px;
+  }
+
+  .scheduleInfo p {
+    font-size: 13px;
+  }
+
+  .infoSection {
+    margin-bottom: 50px;
+  }
+
+  .infoSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .infoCard {
+    padding: 25px 20px;
+  }
+
+  .infoCard h3 {
+    font-size: 18px;
+  }
+
+  .infoCard li {
+    font-size: 14px;
+    padding: 8px 0;
   }
 
   .ctaSection {
     padding: 40px 20px;
   }
 
+  .ctaSection h2 {
+    font-size: 28px;
+  }
+
+  .ctaSection p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
   .ctaButtons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .ctaButton, .ctaButtonOutline {
     width: 100%;
     max-width: 280px;
+    padding: 15px 30px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

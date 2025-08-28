@@ -164,55 +164,132 @@
   white-space: pre-line;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    padding: 60px 0;
+  }
+  
+  .inner {
+    padding: 0 20px;
+  }
+  
+  .greetingSection {
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    padding: 50px;
+  }
+  
+  .leaderImage {
+    width: 180px;
+    height: 220px;
+  }
+  
+  .directorProfile h2 {
+    font-size: 18px;
+  }
+  
+  .directorProfile p {
+    font-size: 22px;
+  }
+  
+  .greeting {
+    font-size: 20px;
+    padding: 18px;
+  }
+  
+  .visionSection {
+    padding: 45px;
+  }
+  
+  .visionTitle {
+    font-size: 26px;
+  }
+  
+  .visionGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .content {
+    padding: 40px 0;
+  }
+  
   .inner {
     padding: 0 15px;
   }
   
   .greetingSection {
-    padding: 30px;
+    padding: 30px 20px;
     margin-bottom: 30px;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
   
   .directorInfo {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 30px;
+    padding-top: 0;
   }
   
   .directorImage {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
-  .imagePlaceholder {
-    width: 100px;
-    height: 100px;
-    font-size: 12px;
+  .leaderImage {
+    width: 150px;
+    height: 180px;
   }
   
   .directorProfile h2 {
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .directorProfile p {
+    font-size: 20px;
+  }
+  
+  .greetingContent {
+    text-align: left;
   }
   
   .greeting {
     font-size: 18px;
     padding: 15px;
+    margin-bottom: 20px;
   }
   
   .greetingText p {
     font-size: 15px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .signature {
+    margin-top: 25px;
+    padding-top: 20px;
+  }
+  
+  .signatureText {
+    font-size: 15px;
+  }
+  
+  .signatureName {
+    font-size: 18px;
   }
   
   .visionSection {
-    padding: 30px;
+    padding: 30px 20px;
   }
   
   .visionTitle {
     font-size: 24px;
+    margin-bottom: 30px;
   }
   
   .visionGrid {
@@ -221,25 +298,66 @@
   }
   
   .visionItem {
-    padding: 20px;
+    padding: 25px 20px;
+    min-height: 120px;
+  }
+  
+  .visionItem h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    white-space: normal;
+  }
+  
+  .visionItem p {
+    font-size: 15px;
   }
 }
 
+/* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .content {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   
-  .greetingSection,
-  .visionSection {
-    padding: 20px;
+  .inner {
+    padding: 0 10px;
+  }
+  
+  .greetingSection {
+    padding: 20px 15px;
+  }
+  
+  .leaderImage {
+    width: 120px;
+    height: 150px;
   }
   
   .greeting {
     font-size: 16px;
+    padding: 12px;
   }
   
   .greetingText p {
+    font-size: 14px;
+  }
+  
+  .visionSection {
+    padding: 20px 15px;
+  }
+  
+  .visionTitle {
+    font-size: 22px;
+  }
+  
+  .visionItem {
+    padding: 20px 15px;
+  }
+  
+  .visionItem h4 {
+    font-size: 16px;
+  }
+  
+  .visionItem p {
     font-size: 14px;
   }
 }

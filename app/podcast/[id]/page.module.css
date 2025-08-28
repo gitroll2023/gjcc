@@ -383,75 +383,269 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 50px 20px;
+  }
+
+  .episodeHeader {
+    padding: 35px;
+  }
+
+  .episodeNumber {
+    margin-right: 30px;
+  }
+
+  .episodeId {
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
   .playerContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 35px;
   }
   
   .podcastThumbnail {
     height: 250px;
   }
+
+  .audioPlayer {
+    padding: 25px;
+  }
+
+  .transcriptSection {
+    padding: 35px;
+    max-height: 500px;
+  }
+
+  .transcriptTitle {
+    font-size: 22px;
+  }
+
+  .otherEpisodes {
+    padding: 25px;
+  }
 }
 
-@media (max-width: 768px) {
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 40px 15px;
+    min-height: auto;
+  }
+
   .episodeHeader {
-    padding: 25px;
+    padding: 25px 20px;
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
   
   .episodeNumber {
-    font-size: 48px;
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .podcastLabel {
+    font-size: 12px;
+    margin-bottom: 3px;
   }
   
-  .playerContent {
-    padding: 25px;
-    gap: 25px;
-  }
-  .transcriptHeader {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
+  .episodeId {
+    font-size: 28px;
   }
 
-  .fontControls {
-    align-self: stretch;
-    justify-content: center;
-  }
-  .container {
-    padding: 120px 15px 40px;
-  }
-
-  .playerSection {
-    padding: 25px;
+  .episodeInfo {
+    order: 2;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 8px;
+    line-height: 1.3;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .metaInfo {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+  }
+  
+  .playerContent {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+
+  .thumbnailWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .podcastThumbnail {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+  }
+
+  .audioPlayer {
+    padding: 25px 20px;
+  }
+
+  .audioElement {
+    height: 50px;
+    margin-bottom: 20px;
   }
 
   .playerControls {
     flex-direction: column;
+    gap: 12px;
   }
 
   .playButton,
   .transcriptButton {
     width: 100%;
     justify-content: center;
+    padding: 14px 20px;
+    min-height: 48px;
   }
 
   .transcriptSection {
-    padding: 25px;
+    padding: 25px 20px;
     max-height: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .transcriptHeader {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .transcriptTitle {
+    font-size: 20px;
+  }
+
+  .fontControls {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .fontButton {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .transcriptItem {
+    padding: 15px;
+  }
+
+  .speaker {
+    font-size: 12px;
+    padding: 4px 10px;
   }
 
   .dialogue {
     font-size: 14px;
+    line-height: 1.6;
+    padding-left: 8px;
+  }
+
+  .otherEpisodes {
+    padding: 25px 20px;
+  }
+
+  .otherEpisodes h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .episodeLink {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .episodeLink .episodeNumber {
+    font-size: 16px;
+  }
+
+  .episodeLink .episodeTitle {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 10px;
+  }
+
+  .episodeHeader {
+    padding: 20px 15px;
+  }
+
+  .episodeId {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .playerContent {
+    padding: 20px 15px;
+  }
+
+  .podcastThumbnail {
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .audioPlayer {
+    padding: 20px 15px;
+  }
+
+  .playButton,
+  .transcriptButton {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .transcriptSection {
+    padding: 20px 15px;
+  }
+
+  .transcriptTitle {
+    font-size: 18px;
+  }
+
+  .dialogue {
+    font-size: 13px;
+  }
+
+  .otherEpisodes {
+    padding: 20px 15px;
   }
 }

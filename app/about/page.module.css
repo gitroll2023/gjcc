@@ -286,14 +286,29 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
+/* Responsive Design */
+/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
+  .container {
+    padding: 40px 20px;
+  }
+
   .missionGrid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .missionCard, .visionCard {
+    padding: 40px;
   }
 
   .valuesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .valuesSection {
+    padding: 50px 40px;
   }
 
   .timelineItem {
@@ -302,21 +317,174 @@
     gap: 20px;
   }
 
+  .timelineDate {
+    flex: none;
+  }
+
+  .timelineContent {
+    flex: none;
+    max-width: 500px;
+  }
+
   .linksGrid {
     grid-template-columns: 1fr;
   }
+
+  .ctaSection {
+    padding: 50px 40px;
+  }
 }
 
-@media (max-width: 768px) {
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .introSection {
+    margin-bottom: 50px;
+  }
+
   .introSection h2 {
     font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .introText {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .missionSection {
+    margin-bottom: 50px;
+  }
+
+  .missionCard, .visionCard {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .missionCard h3, .visionCard h3 {
+    font-size: 24px;
+  }
+
+  .missionCard p, .visionCard p {
+    font-size: 15px;
   }
 
   .valuesSection {
     padding: 40px 20px;
+    margin-bottom: 50px;
+  }
+
+  .valuesSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .valueCard {
+    padding: 30px 20px;
+  }
+
+  .valueIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .valueCard h3 {
+    font-size: 20px;
+  }
+
+  .valueCard p {
+    font-size: 14px;
+  }
+
+  .historySection {
+    margin-bottom: 50px;
+  }
+
+  .historySection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    padding: 0 10px;
+  }
+
+  .timelineItem {
+    margin-bottom: 30px;
+  }
+
+  .timelineDate {
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  .timelineContent {
+    padding: 25px 20px;
+  }
+
+  .timelineContent h4 {
+    font-size: 16px;
+  }
+
+  .timelineContent p {
+    font-size: 14px;
+  }
+
+  .linksSection {
+    margin-bottom: 50px;
+  }
+
+  .linksSection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .linkCard {
+    padding: 25px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .linkCard:hover {
+    transform: translateY(-5px);
+  }
+
+  .linkContent h3 {
+    font-size: 18px;
+  }
+
+  .linkContent p {
+    font-size: 14px;
   }
 
   .ctaSection {
     padding: 40px 20px;
+    margin-bottom: 50px;
+  }
+
+  .ctaSection h2 {
+    font-size: 28px;
+  }
+
+  .ctaSection p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .ctaButton {
+    padding: 15px 30px;
+    font-size: 15px;
+    min-height: 48px;
+    min-width: 48px;
   }
 }

@@ -78,19 +78,135 @@
   color: #333;
 }
 
-@media (max-width: 991px) {
+/* Responsive */
+/* Tablet Breakpoint (768px - 1024px) */
+@media (max-width: 1024px) {
+  .inner {
+    padding: 0 15px;
+  }
+  
   .menuGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .menuItem {
+    padding: 30px 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+    margin-bottom: 40px;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
+  .section {
+    padding: 60px 0;
+  }
+  
   .menuGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .menuItem {
+    padding: 25px 20px;
+    gap: 15px;
+  }
+  
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .menuName {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Breakpoint (max-width: 767px) */
+@media (max-width: 767px) {
+  .section {
+    padding: 50px 0;
+  }
+  
+  .inner {
+    padding: 0 15px;
+  }
+  
+  .menuGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .menuItem {
+    padding: 20px 15px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+  
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .menuName {
+    font-size: 15px;
   }
   
   .sectionTitle {
     font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .menuItem {
+    padding: 25px 20px;
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+  }
+  
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  
+  .menuName {
+    font-size: 16px;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 375px) {
+  .inner {
+    padding: 0 10px;
+  }
+  
+  .menuItem {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  
+  .iconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .menuName {
+    font-size: 15px;
   }
 }

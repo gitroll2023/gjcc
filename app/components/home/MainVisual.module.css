@@ -103,52 +103,154 @@
   transform: scale(1.1);
 }
 
+/* Swiper Responsive */
+@media (max-width: 767px) {
+  .mainVisual :global(.swiper-pagination) {
+    bottom: 20px !important;
+  }
+  
+  .mainVisual :global(.swiper-pagination-bullet) {
+    width: 40px !important;
+    height: 20px !important;
+    font-size: 12px !important;
+    margin: 0 3px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainVisual :global(.swiper-pagination) {
+    bottom: 15px !important;
+  }
+  
+  .mainVisual :global(.swiper-pagination-bullet) {
+    width: 30px !important;
+    height: 18px !important;
+    font-size: 10px !important;
+    margin: 0 2px !important;
+  }
+}
+
 /* Responsive */
+/* Tablet Breakpoint (768px - 1024px) */
+@media (max-width: 1024px) {
+  .mainVisual {
+    height: 700px;
+    margin-top: 110px;
+  }
+  
+  .mainTitle {
+    font-size: 48px;
+  }
+  
+  .subTitle {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  
+  .description {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  
+  .textWrap {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 991px) {
   .mainVisual {
     height: 600px;
-    margin-top: 100px;
+    margin-top: 70px;
   }
   
   .mainTitle {
     font-size: 42px;
+    margin-bottom: 25px;
   }
   
   .subTitle {
     font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 16px;
+    max-width: 450px;
   }
 }
 
+/* Mobile Breakpoint (max-width: 767px) */
 @media (max-width: 767px) {
   .mainVisual {
     height: 500px;
-    margin-top: 90px;
+    margin-top: 60px;
   }
   
   .mainTitle {
     font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   
   .subTitle {
     font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
   }
   
   .description {
-    font-size: 14px;
+    font-size: 15px;
     padding: 0 20px;
+    max-width: none;
+    line-height: 1.6;
+  }
+  
+  .textWrap {
+    padding: 0 15px;
   }
 }
 
-@media (max-width: 575px) {
+/* Small Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
   .mainVisual {
     height: 400px;
   }
   
   .mainTitle {
     font-size: 26px;
+    margin-bottom: 15px;
   }
   
   .subTitle {
     font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .description {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  
+  .textWrap {
+    padding: 0 10px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 375px) {
+  .mainVisual {
+    height: 350px;
+  }
+  
+  .mainTitle {
+    font-size: 24px;
+  }
+  
+  .subTitle {
+    font-size: 15px;
+  }
+  
+  .description {
+    font-size: 13px;
   }
 }

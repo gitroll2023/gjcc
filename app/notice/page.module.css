@@ -443,49 +443,300 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive Design */
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 50px 20px;
+  }
+
+  .importantBanner {
+    padding: 25px 35px;
+    gap: 25px;
+  }
+
+  .bannerIcon {
+    font-size: 35px;
+  }
+
   .statsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .statCard {
+    padding: 30px;
+  }
+
+  .noticeItem {
+    padding: 20px 25px;
   }
 
   .eventsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .eventCard {
+    padding: 25px;
   }
 
   .linksGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .linkCard {
+    padding: 35px 25px;
+  }
+
+  .newsletterSection {
+    padding: 50px 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .bannerSection {
+    margin-bottom: 40px;
+  }
+
   .importantBanner {
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .bannerIcon {
+    font-size: 35px;
+  }
+
+  .bannerContent h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .bannerContent p {
+    font-size: 15px;
+  }
+
+  .bannerLink {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-height: 40px;
+  }
+
+  .statsSection {
+    margin-bottom: 50px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .statCard {
+    padding: 25px 20px;
+  }
+
+  .statNumber {
+    font-size: 36px;
+  }
+
+  .noticesSection {
+    margin-bottom: 50px;
   }
 
   .sectionHeader {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 24px;
+  }
+
+  .filterButtons {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .filterBtn {
+    padding: 8px 16px;
+    font-size: 13px;
   }
 
   .noticeItem {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .noticeItem:hover {
+    transform: none;
   }
 
   .noticeLeft {
     flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
   }
 
-  .newsletterForm {
+  .noticeCategory,
+  .eventCategory,
+  .importantBadge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .noticeTitle {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+
+  .noticeRight {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .noticeDate,
+  .noticeViews {
+    font-size: 13px;
+  }
+
+  .eventsSection {
+    margin-bottom: 50px;
+  }
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .eventCard {
+    padding: 25px 20px;
+  }
+
+  .eventTitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .eventDate {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .linksSection {
+    margin-bottom: 50px;
+  }
+
+  .linksSection h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .linkCard {
+    padding: 30px 25px;
+  }
+
+  .linkIcon {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .linkCard h3 {
+    font-size: 18px;
+  }
+
+  .linkCard p {
+    font-size: 13px;
   }
 
   .newsletterSection {
     padding: 40px 20px;
+  }
+
+  .newsletterSection h2 {
+    font-size: 28px;
+  }
+
+  .newsletterSection p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 350px;
+  }
+
+  .newsletterInput {
+    padding: 15px 20px;
+    font-size: 14px;
+    min-height: 48px;
+  }
+
+  .newsletterButton {
+    padding: 15px 25px;
+    font-size: 14px;
+    min-height: 48px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 10px;
+  }
+
+  .importantBanner {
+    padding: 20px 15px;
+  }
+
+  .statCard {
+    padding: 20px 15px;
+  }
+
+  .statNumber {
+    font-size: 32px;
+  }
+
+  .noticeItem {
+    padding: 15px;
+  }
+
+  .eventCard {
+    padding: 20px 15px;
+  }
+
+  .linkCard {
+    padding: 25px 20px;
+  }
+
+  .newsletterSection {
+    padding: 30px 15px;
+  }
+
+  .newsletterForm {
+    max-width: 300px;
   }
 }
