@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaChevronUp } from 'react-icons/fa';
 import styles from './FloatingNav.module.css';
 
@@ -71,7 +70,7 @@ const FloatingNav = () => {
             style={{ '--item-color': item.color } as React.CSSProperties}
           >
             <div className={styles.iconWrapper}>
-              <Image 
+              <img 
                 src={item.icon} 
                 alt={item.name} 
                 width={30} 

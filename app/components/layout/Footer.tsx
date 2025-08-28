@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -27,7 +26,7 @@ const Footer = () => {
       <div className={styles.footerTop}>
         <div className={styles.footerInner}>
           <div className={styles.footerLogo}>
-            <Image 
+            <img 
               src="/logo/logo.png" 
               alt="광주문화진흥센터" 
               width={220} 
@@ -77,7 +76,7 @@ const Footer = () => {
           <div className={styles.footerQuick}>
             {quickLinks.map((link) => (
               <Link key={link.name} href={link.href} className={styles.quickBtn}>
-                <Image 
+                <img 
                   src={link.icon} 
                   alt={link.name} 
                   width={30} 

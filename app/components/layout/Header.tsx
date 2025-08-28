@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from './Header.module.css';
 
@@ -98,12 +97,11 @@ const Header = () => {
             {/* Logo */}
             <div className={styles.logo}>
               <Link href="/">
-                <Image 
+                <img 
                   src="/logo/logo.png" 
                   alt="광주문화진흥센터" 
                   width={260} 
                   height={60}
-                  priority
                 />
               </Link>
             </div>
