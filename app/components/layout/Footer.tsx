@@ -1,19 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  const [isFamilyOpen, setIsFamilyOpen] = useState(false);
-
-  const familySites = [
-    { name: '광주광역시', url: 'https://www.gwangju.go.kr' },
-    { name: '광주광역시의회', url: 'https://council.gwangju.kr' },
-    { name: '문화체육관광부', url: 'https://www.mcst.go.kr' },
-    { name: '한국문화예술위원회', url: 'https://www.arko.or.kr' },
-  ];
-
   const quickLinks = [
     { name: '온라인접수', icon: '/downloads/quick_icon01.png', href: '/apply' },
     { name: '프로그램', icon: '/downloads/quick_icon02.png', href: '/program' },
@@ -41,26 +32,6 @@ const Footer = () => {
               <li><Link href="/email">이메일무단수집거부</Link></li>
               <li><Link href="/sitemap">사이트맵</Link></li>
             </ul>
-          </div>
-
-          <div className={styles.familySite}>
-            <button 
-              className={styles.familyBtn}
-              onClick={() => setIsFamilyOpen(!isFamilyOpen)}
-            >
-              유관기관 바로가기
-            </button>
-            {isFamilyOpen && (
-              <ul className={styles.familyList}>
-                {familySites.map((site) => (
-                  <li key={site.name}>
-                    <a href={site.url} target="_blank" rel="noopener noreferrer">
-                      {site.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
           </div>
         </div>
       </div>
