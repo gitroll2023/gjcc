@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 
@@ -44,7 +43,7 @@ export default function GreetingPage() {
           <div className={styles.greetingSection}>
             <div className={styles.directorInfo}>
               <div className={styles.directorImage}>
-                <Image 
+                <img 
                   src="/leader.jpg"
                   alt="김정훈 센터장"
                   width={250}
