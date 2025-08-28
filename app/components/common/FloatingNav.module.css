@@ -149,33 +149,9 @@
   }
 }
 
-/* 모바일에서는 하단에 표시 */
+/* 모바일에서는 숨김 */
 @media (max-width: 767px) {
   .floatingNav {
-    position: fixed;
-    right: auto;
-    left: 50%;
-    top: auto;
-    bottom: 20px;
-    transform: translateX(-50%);
-    flex-direction: row;
-    gap: 5px;
-  }
-  
-  .quickMenu {
-    flex-direction: row;
-    padding: 5px;
-  }
-  
-  .quickItem {
-    padding: 8px;
-    min-width: auto;
-  }
-  
-  .topButton {
-    width: 40px;
-    height: 40px;
-    margin-top: 0;
-    margin-left: 5px;
+    display: none !important;
   }
 }
