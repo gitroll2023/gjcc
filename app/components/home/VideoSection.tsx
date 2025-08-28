@@ -44,6 +44,13 @@ const VideoSection = () => {
   ];
 
   useEffect(() => {
+    const playNextPodcast = () => {
+      const nextIndex = (currentIndex + 1) % podcasts.length;
+      setCurrentIndex(nextIndex);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      handlePreviewToggle(podcasts[nextIndex].id);
+    };
+
     // 오디오 재생 시간 체크 및 1분 제한
     const interval = setInterval(() => {
       if (audioRef.current && !audioRef.current.paused) {
@@ -58,13 +65,8 @@ const VideoSection = () => {
     }, 100);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, playingId]);
-
-  const playNextPodcast = () => {
-    const nextIndex = (currentIndex + 1) % podcasts.length;
-    setCurrentIndex(nextIndex);
-    handlePreviewToggle(podcasts[nextIndex].id);
-  };
 
   const handlePreviewToggle = (podcastId: string) => {
     if (playingId === podcastId) {

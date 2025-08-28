@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaBook, FaPalette, FaMusic, FaArrowRight } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';

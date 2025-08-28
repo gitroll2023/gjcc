@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FaHandshake, FaHistory, FaAward, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
+import { FaHandshake, FaHistory, FaAward, FaArrowRight } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 

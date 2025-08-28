@@ -9,7 +9,10 @@
       "Bash(curl:*)",
       "Bash(powershell:*)",
       "mcp__playwright__playwright_hover",
-      "mcp__playwright__playwright_click"
+      "mcp__playwright__playwright_click",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)"
     ],
     "deny": [],
     "ask": []
