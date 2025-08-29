@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://gjcc.kr'
+  const baseUrl = 'https://gjcc.or.kr'
   
   return [
     {
