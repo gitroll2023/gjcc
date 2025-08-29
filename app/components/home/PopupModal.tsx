@@ -9,7 +9,7 @@ const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const popupSlides = [
-    { id: 1, image: '/one&on.jpg', link: '/program/humanities' },
+    { id: 1, image: '/one&on.jpg', link: '/apply' },
   ];
 
   useEffect(() => {
@@ -48,15 +48,13 @@ const PopupModal = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <a href={popupSlides[0].link}>
-            <img src={popupSlides[0].image} alt="원앤온 클래스 안내" />
-          </a>
+          <img src={popupSlides[0].image} alt="원앤온 클래스 안내" />
         </div>
 
         <div className={styles.modalFooter}>
-          <p className={styles.totalCount}>
-            총 <strong>{popupSlides.length}</strong>건
-          </p>
+          <a href={popupSlides[0].link} className={styles.detailButton}>
+            자세히보기 →
+          </a>
           <div className={styles.footerButtons}>
             <button 
               className={styles.todayCloseButton}

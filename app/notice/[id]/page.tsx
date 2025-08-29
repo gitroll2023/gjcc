@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import HeroSection from '@/app/components/common/HeroSection';
@@ -59,6 +59,34 @@ const notices: Record<string, Notice> = {
 감사합니다.`,
     attachments: []
   },
+  '2': {
+    id: 2,
+    title: '센터 이용 시간 변경 안내 (9월 1일부터 적용)',
+    date: '2025-08-23',
+    views: 321,
+    category: '공지',
+    department: '운영지원팀',
+    content: `안녕하세요, 광주문화진흥센터입니다.
+
+9월 1일부터 센터 이용 시간이 변경됨을 안내드립니다.
+
+■ 변경 전
+- 평일: 09:00 ~ 21:00
+- 주말: 09:00 ~ 18:00
+
+■ 변경 후 (9월 1일부터)
+- 평일: 09:00 ~ 22:00
+- 토요일: 09:00 ~ 20:00
+- 일요일: 10:00 ~ 18:00
+
+■ 휴관일
+- 매주 월요일
+- 법정 공휴일
+
+이용에 참고하시기 바랍니다.
+감사합니다.`,
+    attachments: []
+  },
   '3': {
     id: 3,
     title: '2025 여름 음악 페스티벌 개최 결과 안내',
@@ -104,14 +132,47 @@ const notices: Record<string, Notice> = {
 
 감사합니다.`,
     attachments: ['2025_summer_festival_poster.jpg']
+  },
+  '4': {
+    id: 4,
+    title: '청소년 진로 체험 캠프 종료 및 우수 참가자 발표',
+    date: '2025-08-19',
+    views: 287,
+    category: '공지',
+    department: '교육사업팀',
+    content: `안녕하세요, 광주문화진흥센터입니다.
+
+8월 10일부터 14일까지 진행된 '청소년 진로 체험 캠프'가 성황리에 종료되었습니다.
+
+■ 캠프 개요
+- 참가인원: 중고등학생 40명
+- 프로그램: 문화예술 분야 진로 체험
+
+■ 우수 참가자 발표
+- 최우수상(1명): 김민지(광주고 2학년)
+- 우수상(2명): 박준혁(서구중 3학년), 이서연(동구여고 1학년)
+- 장려상(3명): 최현우(남구중 3학년), 정유진(북구고 1학년), 한지민(광산고 2학년)
+
+수상자에게는 별도 연락드릴 예정입니다.
+참가해주신 모든 학생들께 감사드립니다.`,
+    attachments: []
   }
 };
 
 export default function NoticeDetailPage() {
   const params = useParams();
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
   const noticeId = params.id as string;
   const notice = notices[noticeId] || notices['1'];
+  
+  // 이전글/다음글 찾기
+  const noticeIds = Object.keys(notices).map(Number).sort((a, b) => a - b);
+  const currentIndex = noticeIds.indexOf(Number(noticeId));
+  const prevId = currentIndex > 0 ? noticeIds[currentIndex - 1] : null;
+  const nextId = currentIndex < noticeIds.length - 1 ? noticeIds[currentIndex + 1] : null;
+  const prevNotice = prevId ? notices[prevId.toString()] : null;
+  const nextNotice = nextId ? notices[nextId.toString()] : null;
 
   const breadcrumbs = [
     { label: '홈', href: '/' },
@@ -122,6 +183,14 @@ export default function NoticeDetailPage() {
 
   const handleList = () => {
     router.push('/notice/list');
+  };
+
+  const handleDownload = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const formatDate = (dateString: string) => {
@@ -177,7 +246,7 @@ export default function NoticeDetailPage() {
                       <div key={index} className={styles.attachmentItem}>
                         <span className={styles.fileIcon}>📎</span>
                         <span className={styles.fileName}>{file}</span>
-                        <button className={styles.downloadBtn}>다운로드</button>
+                        <button className={styles.downloadBtn} onClick={handleDownload}>다운로드</button>
                       </div>
                     ))}
                   </div>
@@ -187,18 +256,22 @@ export default function NoticeDetailPage() {
 
             <div className={styles.noticeFooter}>
               <div className={styles.navigation}>
-                <div className={styles.navItem}>
-                  <span className={styles.navLabel}>이전글</span>
-                  <Link href="#" className={styles.navLink}>
-                    센터 이용 시간 변경 안내 (9월 1일부터 적용)
-                  </Link>
-                </div>
-                <div className={styles.navItem}>
-                  <span className={styles.navLabel}>다음글</span>
-                  <Link href="#" className={styles.navLink}>
-                    청소년 진로 체험 캠프 종료 및 우수 참가자 발표
-                  </Link>
-                </div>
+                {prevNotice && (
+                  <div className={styles.navItem}>
+                    <span className={styles.navLabel}>이전글</span>
+                    <Link href={`/notice/${prevId}`} className={styles.navLink}>
+                      {prevNotice.title}
+                    </Link>
+                  </div>
+                )}
+                {nextNotice && (
+                  <div className={styles.navItem}>
+                    <span className={styles.navLabel}>다음글</span>
+                    <Link href={`/notice/${nextId}`} className={styles.navLink}>
+                      {nextNotice.title}
+                    </Link>
+                  </div>
+                )}
               </div>
 
               <div className={styles.buttonGroup}>
@@ -210,6 +283,22 @@ export default function NoticeDetailPage() {
           </div>
         </div>
       </div>
+
+      {showModal && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalContent}>
+              <div className={styles.modalIcon}>🔒</div>
+              <h3 className={styles.modalTitle}>접근 제한</h3>
+              <p className={styles.modalText}>외부인 다운로드 불가 자료</p>
+              <p className={styles.modalSubText}>해당 자료는 회원 전용 콘텐츠입니다.</p>
+              <button className={styles.modalButton} onClick={closeModal}>
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

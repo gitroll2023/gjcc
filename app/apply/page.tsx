@@ -15,11 +15,11 @@ const ApplyPage = () => {
   return (
     <>
       <HeroSection 
-        title="온라인 접수"
-        description="광주문화진흥센터 프로그램을 신청하세요"
+        title="One & On"
+        description="광주문화진흥센터 프로그램"
         breadcrumbs={[
           { label: '홈', href: '/' },
-          { label: '온라인 접수' }
+          { label: 'One & On' }
         ]}
       />
 
@@ -28,7 +28,7 @@ const ApplyPage = () => {
         <section className={styles.oneOnSection}>
           <div className={styles.oneOnHeader}>
             <h1 className={styles.mainTitle}>🦢 원앤온 클래스</h1>
-            <p className={styles.subtitle}>One & On 신청하기</p>
+            <p className={styles.subtitle}>One & On 살펴보기</p>
           </div>
 
           <div className={styles.oneOnCard}>
@@ -101,12 +101,12 @@ const ApplyPage = () => {
                 <div className={styles.noticeItem}>
                   <span className={styles.noticeNumber}>1)</span>
                   <p>1교시 원데이 클래스는 <strong>의무 참석</strong>입니다.<br />
-                  (강의실에서 전체 진행됨)</p>
+                  (강의실에서 전체 진행됩니다)</p>
                 </div>
                 <div className={styles.noticeItem}>
                   <span className={styles.noticeNumber}>2)</span>
                   <p>체험비: <strong>회당 5천원</strong><br />
-                  (불참시 돌려드림)</p>
+                  (불참시 돌려드립니다)</p>
                 </div>
               </div>
             </div>
@@ -129,11 +129,7 @@ const ApplyPage = () => {
               현재 온라인접수는 시스템점검으로 사용불가.<br />
               오프라인 신청부탁드립니다.
             </p>
-            <p className={styles.modalInfo}>
-              <strong>운영시간</strong><br />
-              평일 09:00 - 18:00<br />
-              (주말 및 공휴일 휴무)
-            </p>
+           
             <button 
               className={styles.modalButton}
               onClick={() => setShowModal(false)}

@@ -12,9 +12,9 @@ const HumanitiesPage = () => {
   const [showModal, setShowModal] = useState(false);
 
   const galleryImages = [
-    { src: '/photo/On%20&%20One%20인문학/1.png', alt: '인문학 토론 수업 현장' },
-    { src: '/photo/On%20&%20One%20인문학/2.png', alt: '철학 세미나 진행 모습' },
-    { src: '/photo/On%20&%20One%20인문학/3.png', alt: '문학 창작 워크샵' },
+    { src: '/photo/On%20%26%20One%20%EC%9D%B8%EB%AC%B8%ED%95%99/1.png', alt: '인문학 토론 수업 현장' },
+    { src: '/photo/On%20%26%20One%20%EC%9D%B8%EB%AC%B8%ED%95%99/2.png', alt: '철학 세미나 진행 모습' },
+    { src: '/photo/On%20%26%20One%20%EC%9D%B8%EB%AC%B8%ED%95%99/3.png', alt: '문학 창작 워크샵' },
   ];
 
   const instructors = [
