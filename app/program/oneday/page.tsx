@@ -12,21 +12,21 @@ const OnedayPage = () => {
   const [currentCookingImageIndex, setCurrentCookingImageIndex] = useState(0);
 
   const workshopImages = [
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방1.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방2.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방20.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방10.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방15.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/공방6.jpg', alt: '' },
+    { src: '/photo/ONE/공방1.png', alt: '' },
+    { src: '/photo/ONE/공방2.png', alt: '' },
+    { src: '/photo/ONE/공방20.png', alt: '' },
+    { src: '/photo/ONE/공방10.png', alt: '' },
+    { src: '/photo/ONE/공방15.png', alt: '' },
+    { src: '/photo/ONE/공방6.jpg', alt: '' },
   ];
 
   const cookingImages = [
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹1.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹2.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹3.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹4.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹5.png', alt: '' },
-    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹6.png', alt: '' },
+    { src: '/photo/ONE/쿠킹1.png', alt: '' },
+    { src: '/photo/ONE/쿠킹2.png', alt: '' },
+    { src: '/photo/ONE/쿠킹3.png', alt: '' },
+    { src: '/photo/ONE/쿠킹4.png', alt: '' },
+    { src: '/photo/ONE/쿠킹5.png', alt: '' },
+    { src: '/photo/ONE/쿠킹6.png', alt: '' },
   ];
 
   const instructors = [

@@ -19,25 +19,25 @@ const FacilitySection = () => {
       id: 2,
       name: '공방 클래스',
       description: '창의적인 작품 만들기',
-      image: '/photo/원데이클래스(공방,쿠킹)/공방5.png',
+      image: '/photo/ONE/공방5.png',
     },
     {
       id: 3,
       name: '공방 클래스',
       description: '다양한 공예 체험',
-      image: '/photo/원데이클래스(공방,쿠킹)/공방10.png',
+      image: '/photo/ONE/공방10.png',
     },
     {
       id: 4,
       name: '쿠킹 클래스',
       description: '맛있는 요리와 베이킹',
-      image: '/photo/원데이클래스(공방,쿠킹)/쿠킹2.png',
+      image: '/photo/ONE/쿠킹2.png',
     },
     {
       id: 5,
       name: '쿠킹 클래스',
       description: '달콤한 과자 만들기',
-      image: '/photo/원데이클래스(공방,쿠킹)/쿠킹17.png',
+      image: '/photo/ONE/쿠킹17.png',
     },
   ];
 

@@ -18,7 +18,7 @@ const galleryItems: GalleryItem[] = [
   // 인문학 관련
   {
     id: 1,
-    src: '/photo/On & One 인문학/1.png',
+    src: '/photo/ON/1.png',
     alt: '인문학 강의 현장',
     category: '인문학',
     title: 'One & On 인문학 강좌',
@@ -27,7 +27,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    src: '/photo/On & One 인문학/2.png',
+    src: '/photo/ON/2.png',
     alt: '인문학 토론 시간',
     category: '인문학',
     title: '인문학 토론 워크숍',
@@ -36,7 +36,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    src: '/photo/On & One 인문학/3.png',
+    src: '/photo/ON/3.png',
     alt: '인문학 세미나',
     category: '인문학',
     title: '인문학 특별 세미나',
@@ -46,7 +46,7 @@ const galleryItems: GalleryItem[] = [
   // 공방 관련
   {
     id: 4,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방1.png',
+    src: '/photo/ONE/공방1.png',
     alt: '도자기 만들기 체험',
     category: '공방',
     title: '도자기 원데이클래스',
@@ -55,7 +55,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방5.png',
+    src: '/photo/ONE/공방5.png',
     alt: '목공예 체험',
     category: '공방',
     title: '목공예 원데이클래스',
@@ -64,7 +64,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방8.png',
+    src: '/photo/ONE/공방8.png',
     alt: '가죽공예 체험',
     category: '공방',
     title: '가죽공예 원데이클래스',
@@ -73,7 +73,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방12.jpg',
+    src: '/photo/ONE/공방12.jpg',
     alt: '금속공예 체험',
     category: '공방',
     title: '금속공예 원데이클래스',
@@ -82,7 +82,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방15.png',
+    src: '/photo/ONE/공방15.png',
     alt: '염색 체험',
     category: '공방',
     title: '천연염색 원데이클래스',
@@ -92,7 +92,7 @@ const galleryItems: GalleryItem[] = [
   // 쿠킹 관련
   {
     id: 9,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹1.png',
+    src: '/photo/ONE/쿠킹1.png',
     alt: '베이킹 클래스',
     category: '쿠킹',
     title: '홈베이킹 원데이클래스',
@@ -101,7 +101,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹5.png',
+    src: '/photo/ONE/쿠킹5.png',
     alt: '전통요리 체험',
     category: '쿠킹',
     title: '한식 요리 원데이클래스',
@@ -110,7 +110,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 11,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹8.png',
+    src: '/photo/ONE/쿠킹8.png',
     alt: '파스타 만들기',
     category: '쿠킹',
     title: '이탈리안 쿠킹 클래스',
@@ -119,7 +119,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 12,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹12.jpg',
+    src: '/photo/ONE/쿠킹12.jpg',
     alt: '디저트 만들기',
     category: '쿠킹',
     title: '프리미엄 디저트 클래스',
@@ -128,7 +128,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 13,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹16.jpg',
+    src: '/photo/ONE/쿠킹16.jpg',
     alt: '브런치 요리',
     category: '쿠킹',
     title: '브런치 쿠킹 클래스',
@@ -137,7 +137,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 14,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹20.jpg',
+    src: '/photo/ONE/쿠킹20.jpg',
     alt: '아시안 요리',
     category: '쿠킹',
     title: '아시안 퓨전 쿠킹',
@@ -146,7 +146,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 15,
-    src: '/photo/원데이클래스(공방,쿠킹)/공방18.png',
+    src: '/photo/ONE/공방18.png',
     alt: '캘리그라피 체험',
     category: '공방',
     title: '캘리그라피 원데이클래스',
@@ -155,7 +155,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 16,
-    src: '/photo/원데이클래스(공방,쿠킹)/쿠킹25.png',
+    src: '/photo/ONE/쿠킹25.png',
     alt: '카페 음료 만들기',
     category: '쿠킹',
     title: '홈카페 바리스타 클래스',
