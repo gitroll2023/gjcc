@@ -297,7 +297,7 @@ const PerformancePage = () => {
         </section>
 
         <section className={styles.ctaSection}>
-          <h3>문화공연과 함께하는 특별한 시간</h3>
+          <h3>문화공연과 함께하는<br />특별한 시간</h3>
           <p>매달 새로운 공연이 여러분을 기다립니다</p>
           <Link href="/contact" className={styles.ctaButton}>
             공연 문의

@@ -39,7 +39,7 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <div className={styles.footerInner}>
           <div className={styles.footerInfo}>
-            <p>광주광역시 남구 독립로 2 광주문화진흥센터</p>
+            <p>광주광역시 남구 독립로 4 광주문화진흥센터</p>
             <p>대표전화 : 070-462-7934 | 팩스 : 070-462-7935</p>
             <p>Copyright © 2020 광주문화진흥센터. All rights reserved.</p>
           </div>

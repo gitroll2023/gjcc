@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -10,6 +10,11 @@ import styles from './MainVisual.module.css';
 
 const MainVisual = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const slides = [
     { 
@@ -81,20 +86,18 @@ const MainVisual = () => {
         ))}
       </Swiper>
       
-      {typeof window !== 'undefined' && (
-        <div className={styles.textWrap}>
-          <h4 className={styles.subTitle}>{slides[activeIndex].subTitle}</h4>
-          <h3 className={styles.mainTitle}>{slides[activeIndex].mainTitle}</h3>
-          <p className={styles.description}>
-            {slides[activeIndex].description.split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                {index < slides[activeIndex].description.split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </p>
-        </div>
-      )}
+      <div className={styles.textWrap}>
+        <h4 className={styles.subTitle}>{mounted ? slides[activeIndex].subTitle : slides[0].subTitle}</h4>
+        <h3 className={styles.mainTitle}>{mounted ? slides[activeIndex].mainTitle : slides[0].mainTitle}</h3>
+        <p className={styles.description}>
+          {(mounted ? slides[activeIndex].description : slides[0].description).split('\n').map((line, index, arr) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < arr.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </p>
+      </div>
     </section>
   );
 };

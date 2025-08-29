@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import HeroSection from '@/app/components/common/HeroSection';
+import { formatDateStable } from '@/app/utils/dateFormat';
 import styles from './page.module.css';
 
 interface Notice {
@@ -353,14 +354,6 @@ export default function NoticeListPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedNotices = filteredNotices.slice(startIndex, startIndex + itemsPerPage);
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('ko-KR', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    }).replace(/\. /g, '.');
-  };
 
   return (
     <div className={styles.container}>
@@ -438,7 +431,7 @@ export default function NoticeListPage() {
                       </Link>
                     </td>
                     <td className={styles.tdDepartment}>{notice.department || '-'}</td>
-                    <td className={styles.tdDate}>{formatDate(notice.date)}</td>
+                    <td className={styles.tdDate}>{formatDateStable(notice.date)}</td>
                     <td className={styles.tdViews}>{notice.views}</td>
                   </tr>
                 ))}

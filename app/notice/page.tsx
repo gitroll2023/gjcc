@@ -117,7 +117,7 @@ const NoticePage = () => {
             <FaExclamationCircle className={styles.bannerIcon} />
             <div className={styles.bannerContent}>
               <h3>중요 공지</h3>
-              <p>2025년 하반기 문화프로그램 운영 안내입니다. 9월부터 다양한 프로그램이 시작됩니다.</p>
+              <p>2025년 하반기 문화프로그램 운영 안내입니다.<br />9월부터 다양한 프로그램이 시작됩니다.</p>
             </div>
             <Link href="/notice/list" className={styles.bannerLink}>
               자세히 보기 <FaArrowRight />
@@ -285,8 +285,9 @@ const NoticePage = () => {
             <div className={styles.modalIcon}>✉️</div>
             <h3 className={styles.modalTitle}>구독 완료!</h3>
             <p className={styles.modalText}>
-              뉴스레터 구독이 완료되었습니다.<br />
-              광주문화진흥센터의 최신 소식을 이메일로 보내드리겠습니다.
+              뉴스레터 구독이 완료되었습니다.<br /><br />
+              광주문화진흥센터의 최신 소식을<br />
+              이메일로 전달드리겠습니다.
             </p>
             <button 
               className={styles.modalButton}

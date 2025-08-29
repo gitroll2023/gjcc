@@ -98,9 +98,7 @@ const Header = () => {
               <Link href="/">
                 <img 
                   src="/logo/logo.png" 
-                  alt="광주문화진흥센터" 
-                  width={260} 
-                  height={60}
+                  alt="광주문화진흥센터"
                 />
               </Link>
             </div>

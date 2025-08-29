@@ -61,7 +61,7 @@
 @media (max-width: 768px) {
   .heroSection {
     padding: 60px 0 40px;
-    margin-top: 60px; /* Adjusted for mobile header height */
+    margin-top: 70px; /* Adjusted for mobile header height */
   }
 
   .heroTitle {
@@ -80,7 +80,7 @@
 @media (max-width: 480px) {
   .heroSection {
     padding: 50px 0 30px;
-    margin-top: 50px; /* Adjusted for small mobile header height */
+    margin-top: 65px; /* Adjusted for small mobile header height */
   }
 
   .heroTitle {

@@ -132,7 +132,7 @@ const ApplyPage = () => {
             <p className={styles.modalInfo}>
               <strong>운영시간</strong><br />
               평일 09:00 - 18:00<br />
-              주말 09:00 - 17:00
+              (주말 및 공휴일 휴무)
             </p>
             <button 
               className={styles.modalButton}

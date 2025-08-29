@@ -17,7 +17,7 @@ const faqData: FAQ[] = [
     id: 1,
     category: '시설이용',
     question: '문화센터 이용시간은 어떻게 되나요?',
-    answer: '평일 오전 9시부터 오후 9시까지, 주말 오전 9시부터 오후 6시까지 운영됩니다. 매주 월요일과 법정공휴일은 휴관일입니다. 단, 공연이나 특별행사가 있는 경우 운영시간이 연장될 수 있습니다.',
+    answer: '평일 오전 9시부터 오후 6시까지 운영됩니다. 주말 및 공휴일은 휴무입니다. 단, 공연이나 특별행사가 있는 경우 운영시간이 연장될 수 있습니다.',
     popular: true
   },
   {
@@ -30,8 +30,8 @@ const faqData: FAQ[] = [
   {
     id: 3,
     category: '주차',
-    question: '주차는 무료인가요?',
-    answer: '문화센터 이용고객에게는 최초 2시간 무료 주차를 제공합니다. 이후에는 시간당 1,000원의 주차비가 부과됩니다. 주차권은  안내데스크에서 인증받으실 수 있습니다.',
+    question: '주차장이 있나요?',
+    answer: '센터 전용 주차장은 없지만, 인근에 평행주차 가능한 곳이 많이 있어 주차하기 편리합니다. 센터 주변 도로변에 평행주차 공간을 이용하시면 됩니다. 자세한 위치는 안내데스크에 문의해 주시기 바랍니다.',
     popular: true
   },
   {
@@ -45,7 +45,7 @@ const faqData: FAQ[] = [
     id: 5,
     category: '프로그램',
     question: '원데이클래스는 언제 열리나요?',
-    answer: '원데이클래스는 매주 토요일과 일요일에 다양한 주제로 진행됩니다. 월별 프로그램 일정은 매월 25일경 공지됩니다. 신청은 센터  안내데스크에서 직접 오프라인으로만 가능하며, 재료비는 현장에서 납부하시면 됩니다.'
+    answer: '원데이클래스는 평일 저녁이나 특별 일정에 다양한 주제로 진행됩니다. 월별 프로그램 일정은 매월 25일경 공지됩니다. 신청은 센터  안내데스크에서 직접 오프라인으로만 가능하며, 재료비는 현장에서 납부하시면 됩니다.'
   },
   {
     id: 6,
@@ -89,6 +89,8 @@ export default function FAQPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalFAQIndex, setModalFAQIndex] = useState(0);
 
   const breadcrumbs = [
     { label: '홈', href: '/' },
@@ -113,6 +115,23 @@ export default function FAQPage() {
         ? prev.filter(item => item !== id)
         : [...prev, id]
     );
+  };
+
+  const openModal = (index: number) => {
+    setModalFAQIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const nextFAQ = () => {
+    setModalFAQIndex((prev) => (prev + 1) % popularFAQs.length);
+  };
+
+  const prevFAQ = () => {
+    setModalFAQIndex((prev) => (prev - 1 + popularFAQs.length) % popularFAQs.length);
   };
 
   const getCategoryIcon = (category: string) => {
@@ -147,7 +166,7 @@ export default function FAQPage() {
             <div className={styles.popularSection}>
               <h2 className={styles.sectionTitle}>인기 FAQ</h2>
               <div className={styles.popularGrid}>
-                {popularFAQs.map(faq => (
+                {popularFAQs.map((faq, index) => (
                   <div key={faq.id} className={styles.popularCard}>
                     <div className={styles.popularIcon}>
                       {getCategoryIcon(faq.category)}
@@ -159,7 +178,7 @@ export default function FAQPage() {
                       </p>
                       <button 
                         className={styles.readMoreBtn}
-                        onClick={() => toggleItem(faq.id)}
+                        onClick={() => openModal(index)}
                       >
                         자세히 보기
                       </button>
@@ -245,7 +264,7 @@ export default function FAQPage() {
               <h3>원하는 답변을 찾지 못하셨나요?</h3>
               <p>센터  안내데스크에 직접 방문하여 문의하시면 친절하게 안내해드리겠습니다.</p>
               <div className={styles.helpActions}>
-                <p className={styles.offlineNotice}>평일 09:00 - 18:00 | 주말 09:00 - 17:00</p>
+                <p className={styles.offlineNotice}>평일 09:00 - 18:00 (주말 및 공휴일 휴무)</p>
               </div>
             </div>
             
@@ -261,6 +280,44 @@ export default function FAQPage() {
           </div>
         </div>
       </div>
+
+      {/* FAQ Modal */}
+      {modalOpen && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.modalClose} onClick={closeModal}>
+              ✕
+            </button>
+            
+            <div className={styles.modalHeader}>
+              <span className={styles.modalCategory}>
+                [{popularFAQs[modalFAQIndex].category}]
+              </span>
+              <span className={styles.modalBadge}>인기 FAQ</span>
+            </div>
+            
+            <h3 className={styles.modalQuestion}>
+              Q. {popularFAQs[modalFAQIndex].question}
+            </h3>
+            
+            <div className={styles.modalAnswer}>
+              <p>{popularFAQs[modalFAQIndex].answer}</p>
+            </div>
+            
+            <div className={styles.modalNavigation}>
+              <button className={styles.modalNavBtn} onClick={prevFAQ}>
+                ‹ 이전
+              </button>
+              <span className={styles.modalCounter}>
+                {modalFAQIndex + 1} / {popularFAQs.length}
+              </span>
+              <button className={styles.modalNavBtn} onClick={nextFAQ}>
+                다음 ›
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

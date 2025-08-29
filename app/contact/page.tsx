@@ -43,8 +43,8 @@ const ContactPage = () => {
                 <FaClock />
               </div>
               <h3>운영시간</h3>
-              <p className={styles.contactMain}>09:00 - 21:00</p>
-              <p className={styles.contactSub}>월요일 휴관</p>
+              <p className={styles.contactMain}>평일 09:00 - 18:00</p>
+              <p className={styles.contactSub}>주말 및 공휴일 휴무</p>
             </div>
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>

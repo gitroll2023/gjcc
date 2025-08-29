@@ -6,8 +6,19 @@ import Link from 'next/link';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 
+interface Notice {
+  id: number;
+  title: string;
+  date: string;
+  views: number;
+  category: string;
+  department: string;
+  content: string;
+  attachments: string[];
+}
+
 // 공지사항 데이터 (실제로는 API나 데이터베이스에서 가져와야 함)
-const notices = {
+const notices: Record<string, Notice> = {
   '1': {
     id: 1,
     title: '[중요] 2025년 하반기 문화프로그램 운영 안내',
@@ -162,7 +173,7 @@ export default function NoticeDetailPage() {
                 <div className={styles.attachments}>
                   <h3 className={styles.attachmentTitle}>첨부파일</h3>
                   <div className={styles.attachmentList}>
-                    {notice.attachments.map((file, index) => (
+                    {notice.attachments.map((file: string, index: number) => (
                       <div key={index} className={styles.attachmentItem}>
                         <span className={styles.fileIcon}>📎</span>
                         <span className={styles.fileName}>{file}</span>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "광주문화진흥센터",
     description: "문화로 행복한 광주를 만드는 광주문화진흥센터입니다.",
-    url: "https://gjculturecenter.kr",
+    url: "https://gjcc.or.kr",
     siteName: "광주문화진흥센터",
     locale: "ko_KR",
     type: "website",

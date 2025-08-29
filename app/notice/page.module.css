@@ -424,6 +424,7 @@
   border: none;
   border-radius: 30px;
   font-size: 15px;
+  color: #333;
 }
 
 .newsletterButton {
@@ -774,6 +775,7 @@
     padding: 15px 20px;
     font-size: 14px;
     min-height: 48px;
+    color: #333;
   }
 
   .newsletterButton {

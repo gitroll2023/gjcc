@@ -149,8 +149,8 @@
   }
 }
 
-/* 모바일에서는 숨김 */
-@media (max-width: 767px) {
+/* 태블릿과 모바일에서는 숨김 */
+@media (max-width: 991px) {
   .floatingNav {
     display: none !important;
   }

@@ -52,7 +52,7 @@ export default function EmailRefusalPage() {
                 <div className={styles.article}>
                   <h5>제74조(벌칙)</h5>
                   <p>다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.</p>
-                  <ol start="4">
+                  <ol start={4}>
                     <li>제50조의2를 위반하여 전자우편주소를 수집·판매·유통 또는 정보전송에 이용한 자</li>
                   </ol>
                 </div>
