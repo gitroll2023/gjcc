@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import styles from './OnedayGallery.module.css';
 
 const OnedayGallery = () => {
@@ -97,11 +96,9 @@ const OnedayGallery = () => {
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              <Image
+              <img
                 src={image}
                 alt={`원데이 클래스 ${index + 1}`}
-                fill
-                sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
                 className={styles.galleryImage}
               />
             </div>

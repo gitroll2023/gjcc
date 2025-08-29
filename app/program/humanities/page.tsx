@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaBook, FaUsers, FaClock, FaCalendar, FaChevronLeft, FaChevronRight, FaGraduationCap, FaAward } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from '../program.module.css';
@@ -175,11 +174,9 @@ const HumanitiesPage = () => {
           <h3>인문학 프로그램 현장</h3>
           <div className={styles.galleryContainer}>
             <div className={styles.imageWrapper}>
-              <Image
+              <img
                 src={galleryImages[currentImageIndex].src}
                 alt={galleryImages[currentImageIndex].alt}
-                width={800}
-                height={500}
                 className={styles.galleryImage}
               />
               <button className={styles.galleryButton} onClick={prevImage}>
@@ -196,11 +193,9 @@ const HumanitiesPage = () => {
                   className={`${styles.thumbnailButton} ${index === currentImageIndex ? styles.active : ''}`}
                   onClick={() => setCurrentImageIndex(index)}
                 >
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    width={80}
-                    height={60}
                     className={styles.thumbnailImage}
                   />
                 </button>

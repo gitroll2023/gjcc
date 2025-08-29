@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaPalette, FaCoffee, FaHeart, FaStar, FaChevronLeft, FaChevronRight, FaTools, FaCertificate } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from '../program.module.css';
@@ -229,11 +228,9 @@ const OnedayPage = () => {
           <h3>공방 클래스 현장</h3>
           <div className={styles.galleryContainer}>
             <div className={styles.imageWrapper}>
-              <Image
+              <img
                 src={workshopImages[currentWorkshopImageIndex].src}
                 alt={workshopImages[currentWorkshopImageIndex].alt}
-                width={800}
-                height={500}
                 className={styles.galleryImage}
               />
               <button className={styles.galleryButton} onClick={prevWorkshopImage}>
@@ -250,11 +247,9 @@ const OnedayPage = () => {
                   className={`${styles.thumbnailButton} ${index === currentWorkshopImageIndex ? styles.active : ''}`}
                   onClick={() => setCurrentWorkshopImageIndex(index)}
                 >
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    width={80}
-                    height={60}
                     className={styles.thumbnailImage}
                   />
                 </button>
@@ -268,11 +263,9 @@ const OnedayPage = () => {
           <h3>쿠킹 클래스 현장</h3>
           <div className={styles.galleryContainer}>
             <div className={styles.imageWrapper}>
-              <Image
+              <img
                 src={cookingImages[currentCookingImageIndex].src}
                 alt={cookingImages[currentCookingImageIndex].alt}
-                width={800}
-                height={500}
                 className={styles.galleryImage}
               />
               <button className={styles.galleryButton} onClick={prevCookingImage}>
@@ -289,11 +282,9 @@ const OnedayPage = () => {
                   className={`${styles.thumbnailButton} ${index === currentCookingImageIndex ? styles.active : ''}`}
                   onClick={() => setCurrentCookingImageIndex(index)}
                 >
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    width={80}
-                    height={60}
                     className={styles.thumbnailImage}
                   />
                 </button>

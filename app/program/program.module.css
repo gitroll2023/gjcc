@@ -305,10 +305,8 @@
 .galleryImage {
   border-radius: 15px;
   object-fit: cover;
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  max-height: 500px;
+  width: 800px;
+  height: 500px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -369,6 +367,8 @@
 }
 
 .thumbnailImage {
+  width: 80px;
+  height: 60px;
   border-radius: 6px;
   object-fit: cover;
   display: block;
