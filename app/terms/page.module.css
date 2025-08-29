@@ -1,0 +1,184 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.content {
+  padding: 60px 0;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.termsContent {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.updateInfo {
+  padding: 15px 20px;
+  background: #f0f4f8;
+  border-left: 4px solid #4a5568;
+  margin-bottom: 40px;
+}
+
+.updateInfo p {
+  margin: 0;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #4a5568;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.section ol {
+  margin: 20px 0;
+  padding-left: 25px;
+  counter-reset: item;
+}
+
+.section ol > li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 15px;
+  list-style: none;
+  counter-increment: item;
+  position: relative;
+  padding-left: 30px;
+}
+
+.section ol > li:before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.section ul {
+  margin: 10px 0;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+
+.section ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.contactInfo {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contactInfo p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.contactInfo p:last-child {
+  margin-bottom: 0;
+}
+
+.contactInfo strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 0;
+  }
+
+  .termsContent {
+    padding: 30px 20px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .section h3 {
+    font-size: 17px;
+  }
+
+  .section {
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .termsContent {
+    padding: 25px 15px;
+    border-radius: 0;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .section h3 {
+    font-size: 16px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 14px;
+  }
+
+  .section ol > li {
+    padding-left: 25px;
+  }
+
+  .contactInfo {
+    padding: 20px;
+  }
+}

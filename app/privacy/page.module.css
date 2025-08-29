@@ -1,0 +1,165 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.content {
+  padding: 60px 0;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.policyContent {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.updateInfo {
+  padding: 15px 20px;
+  background: #f0f4f8;
+  border-left: 4px solid #4a5568;
+  margin-bottom: 40px;
+}
+
+.updateInfo p {
+  margin: 0;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.section ol,
+.section ul {
+  margin: 20px 0;
+  padding-left: 25px;
+}
+
+.section li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th {
+  background: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border: 1px solid #dee2e6;
+}
+
+.table td {
+  padding: 12px;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.contactBox {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.contactBox h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.contactBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactBox li {
+  font-size: 15px;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 0;
+  }
+
+  .policyContent {
+    padding: 30px 20px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .section {
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policyContent {
+    padding: 25px 15px;
+    border-radius: 0;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 14px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+}

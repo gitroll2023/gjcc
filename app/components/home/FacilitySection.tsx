@@ -8,43 +8,43 @@ import 'swiper/css/pagination';
 import styles from './FacilitySection.module.css';
 
 const FacilitySection = () => {
-  const facilities = [
+  const activities = [
     {
       id: 1,
-      name: '대공연장',
-      description: '1,500석 규모의 대형 공연장',
-      image: 'https://ccon.kr/data/file/fcl/thumb-1039998572_GBd1OJZE_5bb9dde7dd80ad7f313b24e07a681c72e4911d56_630x400.jpg',
+      name: 'One & On 클래스',
+      description: '원데이클래스 + 인문학강의 통합 프로그램',
+      image: '/one&on.jpg',
     },
     {
       id: 2,
-      name: '소공연장',
-      description: '300석 규모의 다목적 공연장',
-      image: 'https://ccon.kr/data/file/fcl/thumb-1039998572_HOdKysXN_558d723cd53e888fdaff4eb70c6a80d7970bce59_630x400.jpg',
+      name: '공방 클래스',
+      description: '창의적인 작품 만들기',
+      image: '/photo/원데이클래스(공방,쿠킹)/공방5.png',
     },
     {
       id: 3,
-      name: '전시실',
-      description: '다양한 전시가 가능한 공간',
-      image: 'https://ccon.kr/data/file/fcl/thumb-1039998572_R06SY4Lk_584fbfe95cbf24a28bb45ec37f5b4be7d0447bfc_630x400.jpg',
+      name: '공방 클래스',
+      description: '다양한 공예 체험',
+      image: '/photo/원데이클래스(공방,쿠킹)/공방10.png',
     },
     {
       id: 4,
-      name: '연습실',
-      description: '예술가들을 위한 연습 공간',
-      image: 'https://ccon.kr/data/file/fcl/thumb-1039998572_Xnsd67qe_53a7e5d1a288eced63c8835f7c2881e09ddfbbad_630x400.jpg',
+      name: '쿠킹 클래스',
+      description: '맛있는 요리와 베이킹',
+      image: '/photo/원데이클래스(공방,쿠킹)/쿠킹2.png',
     },
     {
       id: 5,
-      name: '회의실',
-      description: '세미나 및 회의 공간',
-      image: 'https://ccon.kr/data/file/fcl/thumb-1039998572_4vlr6eyM_24b9a5b0d54b2126bafec5968e34a34bd929b53e_630x400.jpg',
+      name: '쿠킹 클래스',
+      description: '달콤한 과자 만들기',
+      image: '/photo/원데이클래스(공방,쿠킹)/쿠킹17.png',
     },
   ];
 
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h3 className={styles.sectionTitle}>시설안내</h3>
+        <h3 className={styles.sectionTitle}>활동갤러리</h3>
         
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -71,16 +71,16 @@ const FacilitySection = () => {
           }}
           className={styles.swiper}
         >
-          {facilities.map((facility) => (
-            <SwiperSlide key={facility.id}>
+          {activities.map((activity) => (
+            <SwiperSlide key={activity.id}>
               <div className={styles.facilityItem}>
                 <div className={styles.imageWrapper}>
-                  <img src={facility.image} alt={facility.name} />
+                  <img src={activity.image} alt={activity.name} />
                   <div className={styles.overlay}>
-                    <p className={styles.description}>{facility.description}</p>
+                    <p className={styles.description}>{activity.description}</p>
                   </div>
                 </div>
-                <h4 className={styles.facilityName}>{facility.name}</h4>
+                <h4 className={styles.facilityName}>{activity.name}</h4>
               </div>
             </SwiperSlide>
           ))}

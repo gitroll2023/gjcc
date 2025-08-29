@@ -27,7 +27,7 @@ const ContactPage = () => {
                 <FaPhone />
               </div>
               <h3>전화문의</h3>
-              <p className={styles.contactMain}>062-123-4567</p>
+              <p className={styles.contactMain}>070-462-7934</p>
               <p className={styles.contactSub}>평일 09:00 - 18:00</p>
             </div>
             <div className={styles.contactCard}>
@@ -35,7 +35,7 @@ const ContactPage = () => {
                 <FaEnvelope />
               </div>
               <h3>이메일</h3>
-              <p className={styles.contactMain}>info@gjcc.kr</p>
+              <p className={styles.contactMain}>contact@gjcc.or.kr</p>
               <p className={styles.contactSub}>24시간 접수 가능</p>
             </div>
             <div className={styles.contactCard}>
@@ -51,7 +51,7 @@ const ContactPage = () => {
                 <FaMapMarkerAlt />
               </div>
               <h3>방문상담</h3>
-              <p className={styles.contactMain}>1층 안내데스크</p>
+              <p className={styles.contactMain}> 안내데스크</p>
               <p className={styles.contactSub}>평일 09:00 - 18:00</p>
             </div>
           </div>
@@ -96,64 +96,32 @@ const ContactPage = () => {
               <h4>기획운영팀</h4>
               <div className={styles.departmentInfo}>
                 <p><strong>업무:</strong> 센터 운영 총괄, 시설 관리</p>
-                <p><strong>전화:</strong> 062-123-4501</p>
-                <p><strong>이메일:</strong> planning@gjcc.kr</p>
+                <p><strong>전화:</strong> 070-462-7934</p>
+                <p><strong>이메일:</strong> planning@gjcc.or.kr</p>
               </div>
             </div>
             <div className={styles.departmentCard}>
               <h4>문화사업팀</h4>
               <div className={styles.departmentInfo}>
                 <p><strong>업무:</strong> 프로그램 기획 및 운영</p>
-                <p><strong>전화:</strong> 062-123-4502</p>
-                <p><strong>이메일:</strong> culture@gjcc.kr</p>
+                <p><strong>전화:</strong> 070-462-7935</p>
+                <p><strong>이메일:</strong> culture@gjcc.or.kr</p>
               </div>
             </div>
             <div className={styles.departmentCard}>
               <h4>공연기획팀</h4>
               <div className={styles.departmentInfo}>
                 <p><strong>업무:</strong> 공연 기획 및 대관</p>
-                <p><strong>전화:</strong> 062-123-4503</p>
-                <p><strong>이메일:</strong> performance@gjcc.kr</p>
+                <p><strong>전화:</strong> 070-462-7936</p>
+                <p><strong>이메일:</strong> performance@gjcc.or.kr</p>
               </div>
             </div>
             <div className={styles.departmentCard}>
               <h4>홍보마케팅팀</h4>
               <div className={styles.departmentInfo}>
                 <p><strong>업무:</strong> 홍보, 마케팅, 온라인 관리</p>
-                <p><strong>전화:</strong> 062-123-4504</p>
-                <p><strong>이메일:</strong> pr@gjcc.kr</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className={styles.mapSection}>
-          <h2>오시는 길</h2>
-          <div className={styles.mapContainer}>
-            <div className={styles.mapPlaceholder}>
-              <p>지도 영역 (카카오맵 API 연동 예정)</p>
-            </div>
-            <div className={styles.mapInfo}>
-              <h3>광주문화진흥센터</h3>
-              <p className={styles.address}>
-                광주광역시 동구 문화전당로 38
-              </p>
-              <div className={styles.transportInfo}>
-                <div className={styles.transportItem}>
-                  <h4>지하철</h4>
-                  <p>문화전당역 5번 출구 도보 5분</p>
-                </div>
-                <div className={styles.transportItem}>
-                  <h4>버스</h4>
-                  <p>문화전당 정류장 하차</p>
-                  <p>간선: 419, 518, 1187</p>
-                </div>
-                <div className={styles.transportItem}>
-                  <h4>주차</h4>
-                  <p>센터 지하 주차장 이용</p>
-                  <p>2시간 무료 (프로그램 참여시 4시간)</p>
-                </div>
+                <p><strong>전화:</strong> 070-462-7937</p>
+                <p><strong>이메일:</strong> marketing@gjcc.or.kr</p>
               </div>
             </div>
           </div>
@@ -164,10 +132,7 @@ const ContactPage = () => {
           <h2>도움이 필요하신가요?</h2>
           <p>친절하게 안내해드리겠습니다</p>
           <div className={styles.ctaButtons}>
-            <a href="tel:062-123-4567" className={styles.ctaButton}>
-              전화 문의
-            </a>
-            <Link href="/contact/info" className={styles.ctaButtonOutline}>
+            <Link href="/contact/info" className={styles.ctaButton}>
               온라인 문의
             </Link>
           </div>

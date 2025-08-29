@@ -23,30 +23,30 @@ interface Inquiry {
 
 const contactList: ContactInfo[] = [
   {
-    department: '총무팀',
-    phone: '062-123-4567',
-    email: 'admin@gjculture.or.kr',
-    description: '시설 이용 문의, 대관 신청, 일반 업무',
+    department: '기획운영팀',
+    phone: '070-462-7934',
+    email: 'planning@gjcc.or.kr',
+    description: '시설 이용 문의, 대관 신청, 센터 운영 총괄',
     hours: '평일 09:00~18:00'
   },
   {
-    department: '교육팀',
-    phone: '062-123-4568',
-    email: 'edu@gjculture.or.kr',
+    department: '문화사업팀',
+    phone: '070-462-7935',
+    email: 'culture@gjcc.or.kr',
     description: '인문학 강좌, 원데이클래스, 교육 프로그램',
     hours: '평일 09:00~18:00'
   },
   {
     department: '공연기획팀',
-    phone: '062-123-4569',
-    email: 'performance@gjculture.or.kr',
+    phone: '070-462-7936',
+    email: 'performance@gjcc.or.kr',
     description: '공연 관람, 티켓 예매, 공연 기획',
     hours: '평일 10:00~19:00'
   },
   {
-    department: '홍보팀',
-    phone: '062-123-4570',
-    email: 'pr@gjculture.or.kr',
+    department: '홍보마케팅팀',
+    phone: '070-462-7937',
+    email: 'marketing@gjcc.or.kr',
     description: '보도자료, 홍보, SNS, 웹사이트',
     hours: '평일 09:00~18:00'
   }
@@ -118,7 +118,7 @@ export default function ContactInfoPage() {
                   <div className={styles.mainContactIcon}>📞</div>
                   <div className={styles.mainContactInfo}>
                     <h3>대표전화</h3>
-                    <p className={styles.mainPhone}>062-123-4567</p>
+                    <p className={styles.mainPhone}>070-462-7934</p>
                     <p className={styles.mainDesc}>평일 09:00~18:00 (점심시간 12:00~13:00)</p>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function ContactInfoPage() {
                   <div className={styles.mainContactIcon}>📠</div>
                   <div className={styles.mainContactInfo}>
                     <h3>팩스</h3>
-                    <p className={styles.mainPhone}>062-123-4599</p>
+                    <p className={styles.mainPhone}>070-462-7935</p>
                     <p className={styles.mainDesc}>24시간 접수 가능</p>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function ContactInfoPage() {
                   <div className={styles.mainContactIcon}>📧</div>
                   <div className={styles.mainContactInfo}>
                     <h3>이메일</h3>
-                    <p className={styles.mainPhone}>info@gjculture.or.kr</p>
+                    <p className={styles.mainPhone}>contact@gjcc.or.kr</p>
                     <p className={styles.mainDesc}>24시간 접수, 1~2일 내 답변</p>
                   </div>
                 </div>

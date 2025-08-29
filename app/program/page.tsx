@@ -4,18 +4,20 @@ import React from 'react';
 import Link from 'next/link';
 import { FaBook, FaPalette, FaMusic, FaArrowRight } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
+import OnedayGallery from '@/app/components/OnedayGallery';
 import styles from './page.module.css';
 
 const ProgramPage = () => {
   const programs = [
     {
-      title: '인문학 프로그램',
-      description: '철학, 역사, 문학을 통해 삶의 깊이를 더하는 인문학 강좌',
+      title: '🦢 원앤온(One & On) 인문학',
+      description: '원데이클래스(30분) + 인문학강의(1시간) 통합 프로그램',
       icon: <FaBook />,
       href: '/program/humanities',
-      image: '/images/humanities.jpg',
-      features: ['철학 산책', '광주 역사 이야기', '시 창작 워크샵'],
-      color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+      image: '/one&on.jpg',
+      features: ['9월 9,11,16,18일', '오후 2시/저녁 7시 30분', '쿠킹+핸드메이드', '체험비: 회당 5천원'],
+      color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      special: true
     },
     {
       title: '원데이 클래스',
@@ -72,6 +74,9 @@ const ProgramPage = () => {
                 </div>
                 <div className={styles.cardContent}>
                   <h3>{program.title}</h3>
+                  {program.special && (
+                    <span className={styles.specialBadge}>🔴 공지사항 확인</span>
+                  )}
                   <p className={styles.description}>{program.description}</p>
                   <div className={styles.features}>
                     <h4>주요 프로그램</h4>
@@ -90,6 +95,8 @@ const ProgramPage = () => {
             ))}
           </div>
         </section>
+
+        <OnedayGallery />
 
         <section className={styles.scheduleSection}>
           <h2>이달의 프로그램 일정</h2>
@@ -139,8 +146,8 @@ const ProgramPage = () => {
               <h3>신청 방법</h3>
               <ul>
                 <li>온라인: 홈페이지에서 신청</li>
-                <li>오프라인: 센터 1층 안내데스크</li>
-                <li>전화: 062-123-4567</li>
+                <li>오프라인: 센터  안내데스크</li>
+                <li>전화: 070-462-7934</li>
               </ul>
             </div>
             <div className={styles.infoCard}>

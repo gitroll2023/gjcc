@@ -126,7 +126,7 @@
 }
 
 .levelBadge, .priceBadge, .typeBadge {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -135,11 +135,11 @@
 }
 
 .priceBadge {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
 }
 
 .typeBadge {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background: #fa709a;
 }
 
 .programDescription {
@@ -174,7 +174,7 @@
 .applyButton {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
   border: none;
   border-radius: 8px;
@@ -185,9 +185,20 @@
 }
 
 .applyButton:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: #5a67d8;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.applyButton.fullButton {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.applyButton.fullButton:hover {
+  background: #999;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Notice Section */
@@ -267,9 +278,270 @@
   margin-bottom: 5px;
 }
 
+/* Gallery Section */
+.gallerySection {
+  margin-bottom: 80px;
+}
+
+.gallerySection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.galleryContainer {
+  text-align: center;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.galleryImage {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 500px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.galleryButton {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.galleryButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.galleryButtonRight {
+  left: auto;
+  right: 20px;
+}
+
+.galleryThumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.thumbnailButton {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: none;
+  padding: 0;
+}
+
+.thumbnailButton:hover {
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.thumbnailButton.active {
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.thumbnailImage {
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+.imageCaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Instructors Section */
+.instructorsSection {
+  margin-bottom: 80px;
+}
+
+.instructorsSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.instructorsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.instructorCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+.instructorCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.instructorHeader {
+  margin-bottom: 20px;
+}
+
+.instructorHeader h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.instructorTitle,
+.instructorSpecialty {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.instructorDetails {
+  margin-bottom: 15px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.detailItem svg {
+  color: #667eea;
+  font-size: 16px;
+}
+
+.instructorDescription {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Past Events Section */
+.pastEventsSection {
+  margin-bottom: 80px;
+}
+
+.pastEventsSection h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-formal);
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.eventCard {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s;
+}
+
+.eventCard:hover {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.eventHeader h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  flex: 1;
+}
+
+.eventDate,
+.eventType {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.eventDescription {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.eventInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.eventInfo .infoItem {
+  font-size: 13px;
+  color: #666;
+}
+
 /* CTA Section */
 .ctaSection {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   border-radius: 20px;
   padding: 50px;
   text-align: center;
@@ -319,6 +591,24 @@
   .venueGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .instructorsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .galleryImage {
+    max-width: 600px;
+  }
+  
+  .galleryButton {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -334,11 +624,62 @@
     grid-template-columns: 1fr;
   }
   
+  .instructorsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+  
   .introSection h2 {
     font-size: 28px;
   }
   
   .ctaSection {
     padding: 30px 20px;
+  }
+  
+  .galleryImage {
+    max-width: 100%;
+  }
+  
+  .galleryButton {
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .galleryButtonRight {
+    right: 10px;
+  }
+  
+  .galleryThumbnails {
+    gap: 5px;
+  }
+  
+  .thumbnailImage {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .instructorCard {
+    padding: 20px;
+  }
+  
+  .eventCard {
+    padding: 20px;
+  }
+  
+  .eventHeader {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .eventInfo {
+    flex-direction: column;
+    gap: 8px;
   }
 }

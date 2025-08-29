@@ -122,13 +122,6 @@ const AboutPage = () => {
               </div>
               <FaArrowRight className={styles.linkArrow} />
             </Link>
-            <Link href="/about/location" className={styles.linkCard}>
-              <div className={styles.linkContent}>
-                <h3>오시는길</h3>
-                <p>센터 위치와 교통편을 안내합니다</p>
-              </div>
-              <FaArrowRight className={styles.linkArrow} />
-            </Link>
           </div>
         </section>
 

@@ -8,71 +8,73 @@ import styles from './page.module.css';
 
 const NoticePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [email, setEmail] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const notices = [
     {
       id: 1,
       category: 'notice',
-      title: '2025년 상반기 문화프로그램 수강생 모집',
-      date: '2025-01-15',
+      title: '[중요] 2025년 하반기 문화프로그램 운영 안내',
+      date: '2025-08-25',
       isImportant: true,
-      views: 245
-    },
-    {
-      id: 2,
-      category: 'event',
-      title: '봄맞이 문화예술 축제 개최 안내',
-      date: '2025-01-14',
-      isImportant: false,
-      views: 189
+      views: 542
     },
     {
       id: 3,
       category: 'notice',
-      title: '센터 시설 보수공사 일정 안내',
-      date: '2025-01-13',
+      title: '2025 여름 음악 페스티벌 개최 결과 안내',
+      date: '2025-08-21',
+      isImportant: false,
+      views: 425
+    },
+    {
+      id: 2,
+      category: 'notice',
+      title: '[중요] 센터 이용 시간 변경 안내 (9월 1일부터 적용)',
+      date: '2025-08-20',
       isImportant: true,
-      views: 156
+      views: 386
     },
     {
       id: 4,
-      category: 'event',
-      title: '청소년 문화예술 경연대회 참가자 모집',
-      date: '2025-01-12',
+      category: 'notice',
+      title: '청소년 진로 체험 캠프 종료 및 우수 참가자 발표',
+      date: '2025-08-13',
       isImportant: false,
-      views: 234
+      views: 298
     },
     {
       id: 5,
       category: 'notice',
-      title: '온라인 수강 신청 시스템 개선 안내',
-      date: '2025-01-10',
+      title: '전통 공예 워크숍 수료증 발급 안내',
+      date: '2025-08-08',
       isImportant: false,
-      views: 98
+      views: 157
     }
   ];
 
   const events = [
     {
       id: 1,
-      title: '봄날의 클래식 콘서트',
-      date: '2025-04-15',
-      status: '예정',
+      title: '2025 여름 음악 페스티벌',
+      date: '2025-08-15',
+      status: '종료',
       category: '공연'
     },
     {
       id: 2,
-      title: '광주 청년 미술 전시회',
-      date: '2025-03-20',
-      status: '모집중',
-      category: '전시'
+      title: '청소년 진로 체험 캠프',
+      date: '2025-08-10',
+      status: '종료',
+      category: '캠프'
     },
     {
       id: 3,
-      title: '인문학 특별 강연',
-      date: '2025-02-28',
-      status: '모집중',
-      category: '강연'
+      title: '전통 공예 워크숍',
+      date: '2025-08-01',
+      status: '종료',
+      category: '체험'
     }
   ];
 
@@ -115,7 +117,7 @@ const NoticePage = () => {
             <FaExclamationCircle className={styles.bannerIcon} />
             <div className={styles.bannerContent}>
               <h3>중요 공지</h3>
-              <p>2025년 상반기 문화프로그램 수강생 모집이 시작되었습니다. 많은 관심 부탁드립니다.</p>
+              <p>2025년 하반기 문화프로그램 운영 안내입니다. 9월부터 다양한 프로그램이 시작됩니다.</p>
             </div>
             <Link href="/notice/list" className={styles.bannerLink}>
               자세히 보기 <FaArrowRight />
@@ -127,19 +129,19 @@ const NoticePage = () => {
         <section className={styles.statsSection}>
           <div className={styles.statsGrid}>
             <div className={styles.statCard}>
-              <h3>오늘의 공지</h3>
-              <p className={styles.statNumber}>3</p>
+              <h3>이번달 공지</h3>
+              <p className={styles.statNumber}>5</p>
               <p className={styles.statLabel}>새로운 소식</p>
             </div>
             <div className={styles.statCard}>
-              <h3>이달의 행사</h3>
-              <p className={styles.statNumber}>8</p>
-              <p className={styles.statLabel}>진행 예정</p>
+              <h3>종료된 행사</h3>
+              <p className={styles.statNumber}>16</p>
+              <p className={styles.statLabel}>2025년 진행</p>
             </div>
             <div className={styles.statCard}>
-              <h3>모집 프로그램</h3>
-              <p className={styles.statNumber}>12</p>
-              <p className={styles.statLabel}>신청 가능</p>
+              <h3>예정 프로그램</h3>
+              <p className={styles.statNumber}>0</p>
+              <p className={styles.statLabel}>현재 없음</p>
             </div>
           </div>
         </section>
@@ -199,7 +201,7 @@ const NoticePage = () => {
         {/* Upcoming Events */}
         <section className={styles.eventsSection}>
           <div className={styles.sectionHeader}>
-            <h2>예정된 행사</h2>
+            <h2>최근 종료된 행사</h2>
             <Link href="/notice/events" className={styles.viewAllLink}>
               전체보기 <FaArrowRight />
             </Link>
@@ -253,11 +255,21 @@ const NoticePage = () => {
         <section className={styles.newsletterSection}>
           <h2>뉴스레터 구독</h2>
           <p>광주문화진흥센터의 소식을 이메일로 받아보세요</p>
-          <form className={styles.newsletterForm}>
+          <form className={styles.newsletterForm} onSubmit={(e) => {
+            e.preventDefault();
+            if (email && email.includes('@')) {
+              setShowModal(true);
+              setEmail('');
+              setTimeout(() => setShowModal(false), 3000);
+            }
+          }}>
             <input 
               type="email" 
               placeholder="이메일 주소를 입력하세요"
               className={styles.newsletterInput}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <button type="submit" className={styles.newsletterButton}>
               구독하기
@@ -265,6 +277,26 @@ const NoticePage = () => {
           </form>
         </section>
       </div>
+
+      {/* Subscription Success Modal */}
+      {showModal && (
+        <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalIcon}>✉️</div>
+            <h3 className={styles.modalTitle}>구독 완료!</h3>
+            <p className={styles.modalText}>
+              뉴스레터 구독이 완료되었습니다.<br />
+              광주문화진흥센터의 최신 소식을 이메일로 보내드리겠습니다.
+            </p>
+            <button 
+              className={styles.modalButton}
+              onClick={() => setShowModal(false)}
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

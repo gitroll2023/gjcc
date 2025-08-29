@@ -278,27 +278,364 @@
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .programsList {
-    grid-template-columns: 1fr;
-  }
+/* One & On Section */
+.oneOnSection {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-  .helpGrid {
-    grid-template-columns: 1fr;
+.oneOnHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.oneOnCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.basicInfo {
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #667eea;
+  margin-top: 3px;
+}
+
+.infoItem strong {
+  display: block;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.infoItem p {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 500;
+}
+
+.curriculum {
+  padding: 40px;
+}
+
+.classSection {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.classTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.classNumber {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #667eea;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.classContent {
+  padding-left: 20px;
+}
+
+.classItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.classItem:last-child {
+  border-bottom: none;
+}
+
+.date {
+  font-size: 15px;
+  color: #6c757d;
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.classType {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.noticeSection {
+  padding: 40px;
+  background: #fff3cd;
+  border-top: 3px solid #ffc107;
+}
+
+.noticeTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #856404;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.noticeIcon {
+  font-size: 24px;
+  color: #ffc107;
+}
+
+.noticeContent {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.noticeItem {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.noticeItem:last-child {
+  margin-bottom: 0;
+}
+
+.noticeNumber {
+  font-weight: 700;
+  color: #856404;
+  font-size: 16px;
+}
+
+.noticeItem p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+.noticeItem strong {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.applySection {
+  padding: 40px;
+  text-align: center;
+  background: white;
+}
+
+.applyBtn {
+  padding: 18px 60px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.applyBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.modalText {
+  font-size: 16px;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.modalInfo {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.modalInfo strong {
+  display: block;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.modalButton {
+  padding: 12px 40px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modalButton:hover {
+  background: #5a67d8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .filterButtons {
-    flex-wrap: wrap;
-  }
-
-  .programInfo {
+  .infoGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .helpSection {
-    padding: 40px 20px;
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .curriculum,
+  .basicInfo,
+  .noticeSection,
+  .applySection {
+    padding: 25px;
+  }
+
+  .classItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .applyBtn {
+    width: 100%;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .oneOnCard {
+    border-radius: 0;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .curriculum,
+  .basicInfo,
+  .noticeSection,
+  .applySection {
+    padding: 20px;
   }
 }

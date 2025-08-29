@@ -2,37 +2,168 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaMusic, FaTheaterMasks, FaGuitar, FaMicrophone } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaMusic, FaTheaterMasks, FaGuitar, FaMicrophone, FaTicketAlt, FaCalendarAlt, FaStar, FaUsers } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from '../program.module.css';
 
 const PerformancePage = () => {
-  const performances = [
+  const performers = [
     {
-      title: '봄날의 클래식',
-      description: '지역 오케스트라와 함께하는 봄 음악회',
-      date: '2025년 4월 15일',
-      time: '19:30',
-      venue: '대공연장',
+      name: '김O현',
+      specialty: '성악, 오페라',
+      experience: '국립오페라단 주역가수',
+      achievements: '제15회 대한민국 성악콩쿠르 대상',
+      description: '깊이 있는 성악과 오페라 공연으로 관객들에게 감동을 전합니다.',
+    },
+    {
+      name: '박O준',
+      specialty: '연극, 뮤지컬',
+      experience: '광주 시립극단 주연배우',
+      achievements: '2023년 광주연극제 연기상 수상',
+      description: '다양한 캐릭터를 통해 관객과 소통하는 것이 특기입니다.',
+    },
+    {
+      name: '이O수',
+      specialty: '재즈, 피아노',
+      experience: '광주 재즈클럽 상주연주자',
+      achievements: '서울재즈페스티벌 우수상',
+      description: '즉흥연주와 관객과의 교감을 중시하는 재즈 연주자입니다.',
+    },
+    {
+      name: '정O희',
+      specialty: '국악, 가야금',
+      experience: '전남국악원 수석연주자',
+      achievements: '전국국악경연대회 대통령상',
+      description: '전통 국악의 아름다움을 현대적 감각으로 재해석합니다.',
+    },
+    {
+      name: '최O민',
+      specialty: '바이올린, 첼로',
+      experience: '광주시립교향악단 수석',
+      achievements: '국제 콩쿠르 입상',
+      description: '클래식의 정수를 전달하는 현악 연주자입니다.',
+    },
+    {
+      name: '김O민',
+      specialty: '플루트, 관악',
+      experience: '광주 윈드오케스트라 단원',
+      achievements: '전국 관악 경연대회 금상',
+      description: '맑고 아름다운 선율로 관객을 매료시킵니다.',
+    },
+  ];
+
+  const pastPerformances = [
+    {
+      title: '여름 재즈 페스티벌',
+      date: '2025년 8월 10일',
+      description: '한여름 밤의 재즈 향연',
+      performer: '이O수 퀄텟',
+      audience: 480,
+      rating: 4.8,
+      type: '재즈',
+    },
+    {
+      title: '광복절 기념 음악회',
+      date: '2025년 8월 15일',
+      description: '광복의 기쁨을 함께 나누는 특별 공연',
+      performer: '김O현, 정O희',
+      audience: 520,
+      rating: 4.9,
+      type: '기념공연',
+    },
+    {
+      title: '청소년 오케스트라 정기공연',
+      date: '2025년 7월 25일',
+      description: '광주 청소년 오케스트라의 여름 공연',
+      performer: '최O민 지휘',
+      audience: 380,
+      rating: 4.7,
       type: '클래식',
     },
     {
-      title: '청춘 연극제',
-      description: '젊은 극단들의 열정적인 무대',
-      date: '2025년 5월 20일',
-      time: '15:00',
-      venue: '소극장',
-      type: '연극',
+      title: '국악과 재즈의 만남',
+      date: '2025년 6월 20일',
+      description: '전통과 현대의 조화로운 퓨전 공연',
+      performer: '정O희, 이O수',
+      audience: 350,
+      rating: 4.8,
+      type: '퓨전',
     },
     {
-      title: '재즈 나이트',
-      description: '광주 재즈 뮤지션들의 특별한 밤',
-      date: '2025년 6월 10일',
-      time: '20:00',
-      venue: '야외공연장',
-      type: '재즈',
+      title: '봄의 소리 콘서트',
+      date: '2025년 5월 15일',
+      description: '봄을 맞이하는 클래식 향연',
+      performer: '김O민, 최O민',
+      audience: 420,
+      rating: 4.9,
+      type: '클래식',
+    },
+    {
+      title: '어린이날 특별 공연',
+      date: '2025년 5월 5일',
+      description: '온 가족이 함께 즐기는 뮤지컬',
+      performer: '박O준 극단',
+      audience: 500,
+      rating: 4.8,
+      type: '뮤지컬',
+    },
+    {
+      title: '2025 봄 음악제',
+      date: '2025년 4월 18일',
+      description: '봄의 정취를 담은 다채로운 공연',
+      performer: '김O현, 김O민',
+      audience: 460,
+      rating: 4.9,
+      type: '음악축제',
+    },
+    {
+      title: '삼일절 기념 음악회',
+      date: '2025년 3월 1일',
+      description: '독립의 정신을 기리는 특별 공연',
+      performer: '정O희 국악단',
+      audience: 400,
+      rating: 4.9,
+      type: '기념공연',
+    },
+    {
+      title: '2024 송년 음악회',
+      date: '2024년 12월 28일',
+      description: '한 해를 마무리하는 특별한 클래식 공연',
+      performer: '김O현, 최O민',
+      audience: 450,
+      rating: 4.9,
+      type: '클래식',
+    },
+    {
+      title: '2024 가을 음악축제',
+      date: '2024년 11월 25일',
+      description: '클래식부터 재즈까지, 다양한 장르의 음악 축제',
+      performer: '이O수 재즈 밴드',
+      audience: 350,
+      rating: 4.8,
+      type: '음악축제',
+    },
+    {
+      title: '광주 전통예술의 밤',
+      date: '2024년 10월 18일',
+      description: '우리나라 전통 국악과 무용 공연',
+      performer: '정O희 외 국악인',
+      audience: 280,
+      rating: 4.9,
+      type: '전통공연',
+    },
+    {
+      title: '시민 참여 뮤지컬 갈라쇼',
+      date: '2024년 9월 30일',
+      description: '시민들이 직접 참여한 뮤지컬 공연',
+      performer: '박O준 극단',
+      audience: 420,
+      rating: 4.7,
+      type: '뮤지컬',
     },
   ];
+
 
   return (
     <>
@@ -54,6 +185,10 @@ const PerformancePage = () => {
             다양한 장르의 공연을 통해 시민 여러분께 문화적 감동을 선사합니다.
             클래식부터 현대음악, 연극과 무용까지 
             풍성한 문화 공연을 만나보세요.
+          </p>
+          <p style={{ marginTop: '20px', fontStyle: 'italic' }}>
+            이 외에도 특별 게스트들을 종종 섭외하여 
+            시민 여러분께 더욱 다채로운 공연을 선보이고 있습니다.
           </p>
         </section>
 
@@ -83,27 +218,59 @@ const PerformancePage = () => {
           </div>
         </section>
 
-        <section className={styles.programsSection}>
-          <h3>예정된 공연</h3>
-          <div className={styles.programsGrid}>
-            {performances.map((perf, index) => (
-              <div key={index} className={styles.programCard}>
-                <div className={styles.programHeader}>
-                  <h4>{perf.title}</h4>
-                  <span className={styles.typeBadge}>{perf.type}</span>
+        <section className={styles.instructorsSection}>
+          <h3>출연진 소개</h3>
+          <div className={styles.instructorsGrid}>
+            {performers.map((performer, index) => (
+              <div key={index} className={styles.instructorCard}>
+                <div className={styles.instructorHeader}>
+                  <h4>{performer.name}</h4>
+                  <span className={styles.instructorSpecialty}>{performer.specialty}</span>
                 </div>
-                <p className={styles.programDescription}>{perf.description}</p>
-                <div className={styles.programInfo}>
+                <div className={styles.instructorDetails}>
+                  <div className={styles.detailItem}>
+                    <FaMusic />
+                    <span>{performer.experience}</span>
+                  </div>
+                  <div className={styles.detailItem}>
+                    <FaStar />
+                    <span>{performer.achievements}</span>
+                  </div>
+                </div>
+                <p className={styles.instructorDescription}>{performer.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.pastEventsSection}>
+          <h3>지난 공연</h3>
+          <div className={styles.eventsGrid}>
+            {pastPerformances.map((performance, index) => (
+              <div key={index} className={styles.eventCard}>
+                <div className={styles.eventHeader}>
+                  <h4>{performance.title}</h4>
+                  <span className={styles.eventType}>{performance.type}</span>
+                </div>
+                <p className={styles.eventDescription}>{performance.description}</p>
+                <div className={styles.eventInfo}>
                   <div className={styles.infoItem}>
-                    <span className={styles.label}>일시:</span>
-                    <span>{perf.date} {perf.time}</span>
+                    <FaCalendarAlt />
+                    <span>{performance.date}</span>
                   </div>
                   <div className={styles.infoItem}>
-                    <span className={styles.label}>장소:</span>
-                    <span>{perf.venue}</span>
+                    <FaMicrophone />
+                    <span>출연: {performance.performer}</span>
+                  </div>
+                  <div className={styles.infoItem}>
+                    <FaUsers />
+                    <span>관객 {performance.audience}명</span>
+                  </div>
+                  <div className={styles.infoItem}>
+                    <FaStar />
+                    <span>만족도 {performance.rating}/5.0</span>
                   </div>
                 </div>
-                <button className={styles.applyButton}>예매하기</button>
               </div>
             ))}
           </div>

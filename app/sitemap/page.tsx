@@ -19,8 +19,7 @@ const SitemapPage = () => {
       icon: <FaInfoCircle />,
       href: '/about',
       subPages: [
-        { title: '인사말', href: '/about/greeting' },
-        { title: '오시는길', href: '/about/location' }
+        { title: '인사말', href: '/about' }
       ]
     },
     {
@@ -38,9 +37,8 @@ const SitemapPage = () => {
       icon: <FaPodcast />,
       href: '/podcast',
       subPages: [
-        { title: 'EP01 - 광주의 문화유산', href: '/podcast/EP01' },
-        { title: 'EP02 - 청년 예술가', href: '/podcast/EP02' },
-        { title: 'EP03 - 도시재생', href: '/podcast/EP03' }
+        { title: '에피소드', href: '/podcast/EP01' },
+        { title: '라이브 방송', href: '/podcast/live' }
       ]
     },
     {
@@ -120,9 +118,9 @@ const SitemapPage = () => {
               <Link href="/privacy" className={styles.infoLink}>자세히 보기</Link>
             </div>
             <div className={styles.infoCard}>
-              <h3>저작권 정책</h3>
-              <p>본 웹사이트의 모든 콘텐츠는 광주문화진흥센터에 저작권이 있습니다.</p>
-              <Link href="/copyright" className={styles.infoLink}>자세히 보기</Link>
+              <h3>이용약관</h3>
+              <p>광주문화진흥센터 웹사이트 이용에 관한 약관입니다.</p>
+              <Link href="/terms" className={styles.infoLink}>자세히 보기</Link>
             </div>
           </div>
         </section>
@@ -133,7 +131,7 @@ const SitemapPage = () => {
             <Link href="/apply" className={styles.quickLink}>온라인 접수</Link>
             <Link href="/program" className={styles.quickLink}>프로그램 안내</Link>
             <Link href="/notice/list" className={styles.quickLink}>공지사항</Link>
-            <Link href="/contact/info" className={styles.quickLink}>오시는 길</Link>
+            <Link href="/contact" className={styles.quickLink}>문의하기</Link>
             <Link href="/contact/faq" className={styles.quickLink}>자주 묻는 질문</Link>
           </div>
         </section>

@@ -1,5 +1,5 @@
 import MainVisual from './components/home/MainVisual';
-import MainMenu from './components/home/MainMenu';
+import NoticeSection from './components/home/NoticeSection';
 import VideoSection from './components/home/VideoSection';
 import FacilitySection from './components/home/FacilitySection';
 import PartnerSection from './components/home/PartnerSection';
@@ -14,8 +14,8 @@ export default function Home() {
       {/* 메인 비주얼 */}
       <MainVisual />
       
-      {/* 주요 메뉴 섹션 */}
-      <MainMenu />
+      {/* 공지사항 섹션 */}
+      <NoticeSection />
       
       {/* 홍보영상 섹션 */}
       <VideoSection />

@@ -1,22 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { FaTimes } from 'react-icons/fa';
 import Cookies from 'js-cookie';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import styles from './PopupModal.module.css';
 
 const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const popupSlides = [
-    { id: 1, image: '/downloads/banner1.jpg', link: '#' },
-    { id: 2, image: '/downloads/banner2.jpg', link: '#' },
-    { id: 3, image: '/downloads/banner3.jpg', link: '#' },
+    { id: 1, image: '/one&on.jpg', link: '/program/humanities' },
   ];
 
   useEffect(() => {
@@ -54,27 +47,10 @@ const PopupModal = () => {
           </button>
         </div>
 
-        <div className={styles.swiperContainer}>
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            className={styles.swiper}
-          >
-            {popupSlides.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <a href={slide.link}>
-                  <img src={slide.image} alt={`공지사항 ${slide.id}`} />
-                </a>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className={styles.imageContainer}>
+          <a href={popupSlides[0].link}>
+            <img src={popupSlides[0].image} alt="원앤온 클래스 안내" />
+          </a>
         </div>
 
         <div className={styles.modalFooter}>

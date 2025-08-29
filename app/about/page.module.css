@@ -202,8 +202,9 @@
 }
 
 .linksGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -217,6 +218,8 @@
   border-radius: 15px;
   text-decoration: none;
   transition: all 0.3s;
+  max-width: 400px;
+  width: 100%;
 }
 
 .linkCard:hover {

@@ -39,9 +39,9 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <div className={styles.footerInner}>
           <div className={styles.footerInfo}>
-            <p>61475 광주광역시 동구 장동로 23 (장동) 광주문화예술회관</p>
-            <p>대표전화 : 062-670-7400 | 팩스 : 062-670-7499</p>
-            <p>Copyright © 2025 광주문화진흥센터. All rights reserved.</p>
+            <p>광주광역시 남구 독립로 2 광주문화진흥센터</p>
+            <p>대표전화 : 070-462-7934 | 팩스 : 070-462-7935</p>
+            <p>Copyright © 2020 광주문화진흥센터. All rights reserved.</p>
           </div>
 
           <div className={styles.footerQuick}>

@@ -29,7 +29,6 @@ const Header = () => {
       href: '/about',
       subItems: [
         { title: '인사말', href: '/about/greeting' },
-        { title: '오시는길', href: '/about/location' },
       ],
     },
     {
@@ -45,8 +44,8 @@ const Header = () => {
       title: '팟캐스트',
       href: '/podcast',
       subItems: [
-        { title: '최신 에피소드', href: '/podcast/EP01' },
-        { title: '지난 방송', href: '/podcast/archive' },
+        { title: '에피소드', href: '/podcast/EP01' },
+        { title: '라이브 방송', href: '/podcast/live' },
       ],
     },
     {

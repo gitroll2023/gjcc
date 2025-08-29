@@ -41,7 +41,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   padding: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 4px solid #4facfe;
+  border-left: 4px solid #667eea;
 }
 
 .popularCard:hover {
@@ -70,7 +70,7 @@
 }
 
 .readMoreBtn {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #667eea;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -119,12 +119,12 @@
 }
 
 .categoryTab:hover {
-  border-color: #4facfe;
-  color: #4facfe;
+  border-color: #667eea;
+  color: #667eea;
 }
 
 .categoryTab.active {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #667eea;
   border-color: transparent;
   color: white;
 }
@@ -147,7 +147,7 @@
 
 .searchButton {
   padding: 10px 15px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #667eea;
   border: none;
   color: white;
   cursor: pointer;
@@ -193,7 +193,7 @@
 }
 
 .faqNumber {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #667eea;
   color: white;
   padding: 6px 10px;
   border-radius: 6px;
@@ -248,12 +248,12 @@
 }
 
 .toggleButton:hover {
-  border-color: #4facfe;
-  color: #4facfe;
+  border-color: #667eea;
+  color: #667eea;
 }
 
 .faqAnswer {
-  background: linear-gradient(135deg, rgba(79, 172, 254, 0.05) 0%, rgba(0, 242, 254, 0.05) 100%);
+  background: rgba(102, 126, 234, 0.05);
   border-top: 1px solid #f1f3f4;
 }
 
@@ -341,7 +341,7 @@
 }
 
 .contactButton {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #667eea;
   color: white;
 }
 
@@ -452,6 +452,17 @@
   .helpActions {
     flex-direction: column;
   }
+}
+
+.offlineNotice {
+  font-size: 16px;
+  color: #4a5568;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 0;
 }
 
 @media (max-width: 480px) {
