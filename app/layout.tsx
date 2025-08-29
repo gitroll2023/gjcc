@@ -36,12 +36,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
       { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+      { url: 'https://gjcc.or.kr/favicon.ico', type: 'image/x-icon' },
       { url: 'https://gjcc.or.kr/favicon.png', type: 'image/png', sizes: '32x32' }
     ],
     shortcut: [
-      { url: '/favicon.png', type: 'image/png' },
-      { url: 'https://gjcc.or.kr/favicon.png', type: 'image/png' }
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: 'https://gjcc.or.kr/favicon.ico', type: 'image/x-icon' }
     ],
     apple: [
       { url: '/favicon.png', type: 'image/png', sizes: '180x180' },
@@ -97,10 +99,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1e3a5f" />
         
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        {/* Favicon - Multiple formats for better compatibility */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="icon" href="https://gjcc.or.kr/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="https://gjcc.or.kr/favicon.png" type="image/png" />
         
         {/* Open Graph Image */}
