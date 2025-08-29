@@ -19,14 +19,14 @@ const NoticeSection = () => {
   const notices: Notice[] = [
     {
       id: 1,
-      title: '[중요] 2025년 하반기 문화프로그램 운영 안내',
+      title: '2025년 하반기 문화프로그램 운영 안내',
       date: '2025-08-25',
       category: '공지',
       isImportant: true
     },
     {
       id: 2,
-      title: '[중요] 센터 이용 시간 변경 안내 (9월 1일부터 적용)',
+      title: '센터 이용 시간 변경 안내 (9월 1일부터 적용)',
       date: '2025-08-20',
       category: '안내',
       isImportant: true
@@ -111,13 +111,10 @@ const NoticeSection = () => {
                 <span className={`${styles.category} ${styles[notice.category]}`}>
                   {notice.category}
                 </span>
-                {notice.isImportant && (
-                  <span className={styles.important}>중요</span>
-                )}
                 <span className={styles.noticeTitle}>{notice.title}</span>
               </div>
               <span className={styles.date}>
-                {new Date(notice.date).toLocaleDateString('ko-KR')}
+                {notice.date}
               </span>
             </Link>
           ))}

@@ -98,47 +98,6 @@ const ProgramPage = () => {
 
         <OnedayGallery />
 
-        <section className={styles.scheduleSection}>
-          <h2>이달의 프로그램 일정</h2>
-          <div className={styles.calendar}>
-            <div className={styles.calendarHeader}>
-              <h3>2025년 1월</h3>
-            </div>
-            <div className={styles.scheduleList}>
-              <div className={styles.scheduleItem}>
-                <div className={styles.date}>
-                  <span className={styles.day}>15</span>
-                  <span className={styles.weekday}>화</span>
-                </div>
-                <div className={styles.scheduleInfo}>
-                  <h4>철학 산책 - 일상에서 만나는 철학</h4>
-                  <p>19:00 - 21:00 | 세미나실</p>
-                </div>
-              </div>
-              <div className={styles.scheduleItem}>
-                <div className={styles.date}>
-                  <span className={styles.day}>18</span>
-                  <span className={styles.weekday}>금</span>
-                </div>
-                <div className={styles.scheduleInfo}>
-                  <h4>도자기 만들기 원데이 클래스</h4>
-                  <p>14:00 - 17:00 | 공예실</p>
-                </div>
-              </div>
-              <div className={styles.scheduleItem}>
-                <div className={styles.date}>
-                  <span className={styles.day}>22</span>
-                  <span className={styles.weekday}>화</span>
-                </div>
-                <div className={styles.scheduleInfo}>
-                  <h4>봄날의 클래식 콘서트</h4>
-                  <p>19:30 - 21:30 | 대공연장</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className={styles.infoSection}>
           <h2>프로그램 안내</h2>
           <div className={styles.infoGrid}>

@@ -56,12 +56,14 @@
   transition: all 0.3s;
   position: relative;
   overflow: visible;
+  z-index: 1;
 }
 
 .partnerItem:hover {
   border-color: var(--main-color);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
+  z-index: 10;
 }
 
 .partnerItem img {
@@ -111,5 +113,12 @@
   
   .partnerItem {
     height: 60px;
+    overflow: visible;
+  }
+  
+  .partnerItem:hover {
+    transform: none;
+    position: relative;
+    z-index: 20;
   }
 }

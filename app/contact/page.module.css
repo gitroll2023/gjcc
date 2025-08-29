@@ -466,6 +466,7 @@
   .optionFeatures li {
     font-size: 14px;
     padding: 8px 0;
+    padding-left: 30px;
   }
 
   .departmentSection {

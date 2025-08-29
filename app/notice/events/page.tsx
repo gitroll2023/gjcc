@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 

@@ -1,0 +1,197 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: white;
+  padding: 200px 20px 100px;
+  margin: 0;
+}
+
+.content {
+  background: white;
+  border: 1px solid #d1d1d1;
+  padding: 50px 40px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.errorCode {
+  font-size: 72px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin: 20px 0 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.homeButton,
+.backButton {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  border: 1px solid #333;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.homeButton {
+  background: #333;
+  color: white;
+}
+
+.homeButton:hover {
+  background: #555;
+}
+
+.backButton {
+  background: white;
+  color: #333;
+}
+
+.backButton:hover {
+  background: #f9f9f9;
+}
+
+.suggestions {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+  margin-bottom: 0;
+}
+
+.suggestions h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.quickLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.quickLink:hover {
+  background: #f0f0f0;
+}
+
+.icon {
+  font-size: 16px;
+  color: #666;
+}
+
+.contactInfo {
+  border-top: 1px solid #e9ecef;
+  padding-top: 30px;
+  color: #6c757d;
+}
+
+.contactInfo p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.phone,
+.email {
+  font-size: 16px !important;
+  color: #495057;
+  font-weight: 600;
+  margin: 10px 0 !important;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 30px;
+  }
+
+  .errorCode {
+    font-size: 80px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .homeButton,
+  .backButton {
+    width: 100%;
+  }
+
+  .quickLinks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 30px 20px;
+  }
+
+  .errorCode {
+    font-size: 60px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .homeButton,
+  .backButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
