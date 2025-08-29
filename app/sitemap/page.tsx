@@ -60,7 +60,7 @@ const SitemapPage = () => {
       ]
     },
     {
-      title: '온라인접수',
+      title: '원앤온',
       icon: <FaCalendarAlt />,
       href: '/apply',
       subPages: []

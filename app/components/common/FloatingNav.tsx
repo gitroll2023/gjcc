@@ -31,7 +31,7 @@ const FloatingNav = () => {
   const quickMenuItems = [
     { 
       id: 1, 
-      name: '온라인\n접수', 
+      name: '원앤온\n클래스', 
       icon: '/downloads/quick_icon01.png', 
       href: '/apply',
       color: '#FF6B6B'

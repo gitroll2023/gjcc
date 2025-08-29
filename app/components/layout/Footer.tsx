@@ -6,7 +6,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   const quickLinks = [
-    { name: '온라인접수', icon: '/downloads/quick_icon01.png', href: '/apply' },
+    { name: '원앤온', icon: '/downloads/quick_icon01.png', href: '/apply' },
     { name: '프로그램', icon: '/downloads/quick_icon02.png', href: '/program' },
     { name: '공지사항', icon: '/downloads/quick_icon03.png', href: '/notice/list' },
     { name: '문의하기', icon: '/downloads/quick_icon04.png', href: '/contact' },

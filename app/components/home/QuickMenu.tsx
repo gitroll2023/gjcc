@@ -8,7 +8,7 @@ import styles from './QuickMenu.module.css';
 const QuickMenu = () => {
   const menuItems = [
     { id: 1, name: '사업공고', icon: '/downloads/quick_icon01.png', href: '/notice/business' },
-    { id: 2, name: '온라인접수', icon: '/downloads/quick_icon02.png', href: '/apply' },
+    { id: 2, name: '원앤온', icon: '/downloads/quick_icon02.png', href: '/apply' },
     { id: 3, name: '시설예약', icon: '/downloads/quick_icon03.png', href: '/reservation' },
     { id: 4, name: '자료실', icon: '/downloads/quick_icon04.png', href: '/archive' },
   ];
