@@ -18,7 +18,7 @@ const galleryItems: GalleryItem[] = [
   // 인문학 관련
   {
     id: 1,
-    src: '/photo/One & On 인문학/1.png',
+    src: '/photo/On & One 인문학/1.png',
     alt: '인문학 강의 현장',
     category: '인문학',
     title: 'One & On 인문학 강좌',
@@ -27,7 +27,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    src: '/photo/One & On 인문학/2.png',
+    src: '/photo/On & One 인문학/2.png',
     alt: '인문학 토론 시간',
     category: '인문학',
     title: '인문학 토론 워크숍',
@@ -36,7 +36,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    src: '/photo/One & On 인문학/3.png',
+    src: '/photo/On & One 인문학/3.png',
     alt: '인문학 세미나',
     category: '인문학',
     title: '인문학 특별 세미나',

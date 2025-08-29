@@ -12,21 +12,21 @@ const OnedayPage = () => {
   const [currentCookingImageIndex, setCurrentCookingImageIndex] = useState(0);
 
   const workshopImages = [
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A91.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A92.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A920.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A910.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A915.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EA%B3%B5%EB%B0%A96.jpg', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방1.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방2.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방20.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방10.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방15.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/공방6.jpg', alt: '' },
   ];
 
   const cookingImages = [
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B91.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B92.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B93.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B94.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B95.png', alt: '' },
-    { src: '/photo/%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%28%EA%B3%B5%EB%B0%A9%2C%EC%BF%A0%ED%82%B9%29/%EC%BF%A0%ED%82%B96.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹1.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹2.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹3.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹4.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹5.png', alt: '' },
+    { src: '/photo/원데이클래스(공방,쿠킹)/쿠킹6.png', alt: '' },
   ];
 
   const instructors = [
