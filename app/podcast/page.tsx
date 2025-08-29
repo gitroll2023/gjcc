@@ -32,6 +32,14 @@ const PodcastListPage = () => {
       duration: '05:22',
       date: '2025.08.04',
     },
+    {
+      id: 'EP04',
+      title: '유창성 착각',
+      description: '쉽게 읽히는 글이 정말 이해하기 쉬운 걸까?',
+      thumbnail: '/podcast/Ep04 유창성착각/image.png',
+      duration: '04:12',
+      date: '2025.08.29',
+    },
   ];
 
   return (

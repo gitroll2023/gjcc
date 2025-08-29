@@ -96,6 +96,15 @@ const PodcastPlayer = () => {
           transcriptFile: 'Ep03. 대본.txt',
           thumbnail: '/podcast/Ep03 문화예술공연/image.png',
           date: '2025.08.04'
+        },
+        'EP04': {
+          title: '유창성 착각',
+          description: '쉽게 읽히는 글이 정말 이해하기 쉬운 걸까?',
+          folder: 'Ep04 유창성착각',
+          audioFile: 'Ep04. 유창성 착각.wav',
+          transcriptFile: 'Ep04 대본.txt',
+          thumbnail: '/podcast/Ep04 유창성착각/image.png',
+          date: '2025.08.29'
         }
       };
 
@@ -268,11 +277,12 @@ const PodcastPlayer = () => {
         <div className={styles.otherEpisodes}>
           <h3>다른 에피소드</h3>
           <div className={styles.episodeList}>
-            {['EP01', 'EP02', 'EP03'].filter(ep => ep !== params.id).map(ep => {
+            {['EP01', 'EP02', 'EP03', 'EP04'].filter(ep => ep !== params.id).map(ep => {
               const titles: { [key: string]: string } = {
                 'EP01': '인문학과 함께하는 광주',
                 'EP02': '원데이클래스 체험기',
-                'EP03': '문화공연 이야기'
+                'EP03': '문화공연 이야기',
+                'EP04': '유창성 착각'
               };
               
               return (

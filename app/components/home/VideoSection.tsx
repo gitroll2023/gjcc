@@ -43,6 +43,15 @@ const VideoSection = () => {
       duration: '05:22',
       date: '2025.08.04',
     },
+    {
+      id: 'EP04',
+      title: '[EP.04] 유창성 착각',
+      description: '쉽게 읽히는 글이 정말 이해하기 쉬운 걸까?',
+      thumbnail: '/podcast/Ep04 유창성착각/image.png',
+      audioFile: '/podcast/Ep04 유창성착각/Ep04. 유창성 착각.wav',
+      duration: '04:12',
+      date: '2025.08.29',
+    },
   ];
 
   useEffect(() => {
@@ -133,8 +142,8 @@ const VideoSection = () => {
         
         <Swiper
           modules={[Navigation]}
-          spaceBetween={30}
-          slidesPerView={3}
+          spaceBetween={25}
+          slidesPerView={4}
           navigation
           centeredSlides={false}
           allowTouchMove={true}
@@ -161,7 +170,12 @@ const VideoSection = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 25,
+              centeredSlides: false,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 25,
               centeredSlides: false,
             },
           }}

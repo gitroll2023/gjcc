@@ -123,7 +123,7 @@ export default function PrivacyPage() {
               <div className={styles.contactBox}>
                 <h3>개인정보 보호책임자</h3>
                 <ul>
-                  <li>성명: 홍길동</li>
+                  <li>성명: 홍성민</li>
                   <li>직책: 기획운영팀장</li>
                   <li>연락처: 070-462-7934</li>
                   <li>이메일: privacy@gjcc.or.kr</li>

@@ -156,16 +156,14 @@
 
 .podcastTitle {
   font-family: var(--font-formal);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #333;
   margin-bottom: 10px;
-  line-height: 1.4;
+  line-height: 1.3;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
 }
 
 .podcastDesc {
@@ -292,6 +290,21 @@
 }
 
 /* Responsive Design */
+/* Large Desktop (1280px+) - 4 items */
+@media (min-width: 1280px) {
+  .podcastTitle {
+    font-size: 15px;
+  }
+  
+  .podcastDesc {
+    font-size: 13px;
+  }
+  
+  .podcastInfo {
+    padding: 15px;
+  }
+}
+
 /* Tablet Breakpoint (768px - 1024px) */
 @media (max-width: 1024px) {
   .inner {
