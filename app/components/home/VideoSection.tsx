@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './VideoSection.module.css';
@@ -13,6 +14,7 @@ const VideoSection = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
   const podcasts = [
     {
       id: 'EP01',
@@ -47,6 +49,17 @@ const VideoSection = () => {
     const playNextPodcast = () => {
       const nextIndex = (currentIndex + 1) % podcasts.length;
       setCurrentIndex(nextIndex);
+      
+      // Swiper를 다음 슬라이드로 이동 (모바일에서 중요)
+      // setTimeout을 사용하여 상태 업데이트 후 슬라이드 이동
+      setTimeout(() => {
+        if (swiperRef.current) {
+          swiperRef.current.slideTo(nextIndex);
+          // 모바일에서 centeredSlides가 true일 때 추가적인 업데이트
+          swiperRef.current.update();
+        }
+      }, 100);
+      
       // eslint-disable-next-line react-hooks/exhaustive-deps
       handlePreviewToggle(podcasts[nextIndex].id);
     };
@@ -92,6 +105,14 @@ const VideoSection = () => {
         // 자동으로 다음 팟캐스트로 넘어가기 위해 인덱스 업데이트
         const index = podcasts.findIndex(p => p.id === podcastId);
         setCurrentIndex(index);
+        
+        // 수동으로 클릭했을 때도 해당 슬라이드로 이동
+        setTimeout(() => {
+          if (swiperRef.current) {
+            swiperRef.current.slideTo(index);
+            swiperRef.current.update();
+          }
+        }, 100);
       }
     }
   };
@@ -116,6 +137,17 @@ const VideoSection = () => {
           slidesPerView={3}
           navigation
           centeredSlides={false}
+          allowTouchMove={true}
+          grabCursor={true}
+          initialSlide={currentIndex}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => {
+            // 사용자가 스와이프했을 때 현재 인덱스 업데이트
+            const newIndex = swiper.activeIndex;
+            if (newIndex !== currentIndex && !playingId) {
+              setCurrentIndex(newIndex);
+            }
+          }}
           breakpoints={{
             320: {
               slidesPerView: 1,
