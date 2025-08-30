@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaHome, FaInfoCircle, FaCalendarAlt, FaPodcast, FaBullhorn, FaPhone } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaCalendarAlt, FaPodcast, FaBullhorn } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 
