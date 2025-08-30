@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "광주문화진흥센터 | 문화로 행복한 광주를 만드는 곳",
-  description: "광주문화진흥센터는 다양한 문화예술 프로그램과 인문학 강좌, 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다. 문화예술 교육, 전시, 공연 정보를 확인하세요.",
-  keywords: "광주문화진흥센터, 문화예술, 광주, 문화정책, 문화사업, 인문학강좌, 원데이클래스, 문화공연, 전시회, 시민문화, 문화교육, 광주시, 문화센터, One&On, 원앤온",
+  description: "광주문화진흥센터는 다양한 문화예술 프로그램과 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다. 문화예술 교육, 전시, 공연 정보를 확인하세요.",
+  keywords: "광주문화진흥센터, 문화예술, 광주, 문화정책, 문화사업, 원데이클래스, 문화공연, 전시회, 시민문화, 문화교육, 광주시, 문화센터, One&On, 원앤온",
   authors: [{ name: "광주문화진흥센터" }],
   creator: "광주문화진흥센터",
   publisher: "광주문화진흥센터",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "광주문화진흥센터 | 문화로 행복한 광주를 만드는 곳",
-    description: "광주문화진흥센터는 다양한 문화예술 프로그램과 인문학 강좌, 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
+    description: "광주문화진흥센터는 다양한 문화예술 프로그램과 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
     url: "https://gjcc.or.kr",
     siteName: "광주문화진흥센터",
     locale: "ko_KR",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "광주문화진흥센터 | 문화로 행복한 광주를 만드는 곳",
-    description: "광주문화진흥센터는 다양한 문화예술 프로그램과 인문학 강좌, 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
+    description: "광주문화진흥센터는 다양한 문화예술 프로그램과 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
     images: ['https://gjcc.or.kr/og-image.png'],
     creator: '@gjcc',
   },
@@ -130,15 +130,14 @@ export default function RootLayout({
               "name": "광주문화진흥센터",
               "alternateName": "GJCC",
               "url": "https://gjcc.or.kr",
-              "logo": "https://gjcc.or.kr/logo/logo.png",
+              "logo": "https://gjcc.or.kr/logo/new_logo.png",
               "image": "https://gjcc.or.kr/og-image.png",
-              "description": "광주문화진흥센터는 다양한 문화예술 프로그램과 인문학 강좌, 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
+              "description": "광주문화진흥센터는 다양한 문화예술 프로그램과 원데이클래스, 공연 등을 통해 시민의 문화 향유 기회를 제공합니다.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "광주광역시",
                 "addressCountry": "KR"
               },
-              "telephone": "070-462-7934",
               "email": "program@gjcc.or.kr",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -155,14 +154,6 @@ export default function RootLayout({
                 "@type": "OfferCatalog",
                 "name": "문화프로그램",
                 "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "인문학 강좌",
-                      "description": "철학, 역사, 문학을 통해 인간과 사회를 이해하는 프로그램"
-                    }
-                  },
                   {
                     "@type": "Offer",
                     "itemOffered": {

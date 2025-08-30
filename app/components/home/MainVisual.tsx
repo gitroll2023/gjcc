@@ -31,7 +31,7 @@ const MainVisual = () => {
       bg: '#2a4a6f',
       subTitle: '다양한 문화프로그램과 함께하는',
       mainTitle: '풍요로운 일상',
-      description: '인문학 강좌부터 예술 체험까지\n당신의 삶을 더욱 풍성하게 만들어드립니다.'
+      description: '문화예술 프로그램부터 예술 체험까지\n당신의 삶을 더욱 풍성하게 만들어드립니다.'
     },
     { 
       id: 3, 

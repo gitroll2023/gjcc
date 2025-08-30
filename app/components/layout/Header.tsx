@@ -35,7 +35,6 @@ const Header = () => {
       title: '프로그램',
       href: '/program',
       subItems: [
-        { title: '인문학', href: '/program/humanities' },
         { title: '원데이클래스', href: '/program/oneday' },
         { title: '문화공연', href: '/program/performance' },
       ],
@@ -54,14 +53,6 @@ const Header = () => {
       subItems: [
         { title: '공지사항', href: '/notice/list' },
         { title: '행사안내', href: '/notice/events' },
-      ],
-    },
-    {
-      title: '문의하기',
-      href: '/contact',
-      subItems: [
-        { title: '연락처', href: '/contact/info' },
-        { title: 'FAQ', href: '/contact/faq' },
       ],
     },
   ];
@@ -97,7 +88,7 @@ const Header = () => {
             <div className={styles.logo}>
               <Link href="/">
                 <img 
-                  src="/logo/logo.png" 
+                  src="/logo/new_logo.png" 
                   alt="광주문화진흥센터"
                 />
               </Link>

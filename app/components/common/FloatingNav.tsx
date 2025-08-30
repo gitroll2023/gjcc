@@ -50,13 +50,6 @@ const FloatingNav = () => {
       href: '/notice/list',
       color: '#45B7D1'
     },
-    { 
-      id: 4, 
-      name: '문의\n하기', 
-      icon: '/downloads/quick_icon04.png', 
-      href: '/contact',
-      color: '#96CEB4'
-    },
   ];
 
   return (

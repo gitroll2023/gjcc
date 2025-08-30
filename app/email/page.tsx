@@ -106,14 +106,6 @@ export default function EmailRefusalPage() {
                     <strong>대표 이메일</strong>
                     <p>contact@gjcc.or.kr</p>
                   </div>
-                  <div className={styles.contactItem}>
-                    <strong>대표 전화</strong>
-                    <p>070-462-7934</p>
-                  </div>
-                  <div className={styles.contactItem}>
-                    <strong>팩스</strong>
-                    <p>070-462-7935</p>
-                  </div>
                 </div>
               </div>
             </section>

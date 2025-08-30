@@ -27,7 +27,6 @@ const SitemapPage = () => {
       icon: <FaCalendarAlt />,
       href: '/program',
       subPages: [
-        { title: '인문학', href: '/program/humanities' },
         { title: '원데이클래스', href: '/program/oneday' },
         { title: '문화공연', href: '/program/performance' }
       ]
@@ -48,15 +47,6 @@ const SitemapPage = () => {
       subPages: [
         { title: '공지사항', href: '/notice/list' },
         { title: '행사안내', href: '/notice/events' }
-      ]
-    },
-    {
-      title: '문의하기',
-      icon: <FaPhone />,
-      href: '/contact',
-      subPages: [
-        { title: '연락처', href: '/contact/info' },
-        { title: 'FAQ', href: '/contact/faq' }
       ]
     },
     {

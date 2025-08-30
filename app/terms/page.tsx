@@ -151,7 +151,6 @@ export default function TermsPage() {
               <p>문의사항이 있으시면 아래로 연락주시기 바랍니다.</p>
               <p>
                 <strong>광주문화진흥센터</strong><br />
-                전화: 070-462-7934<br />
                 이메일: contact@gjcc.or.kr
               </p>
             </div>

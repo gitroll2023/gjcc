@@ -71,39 +71,30 @@ const PodcastPlayer = () => {
       
       const podcastInfo: { [key: string]: { title: string; description: string; folder: string; audioFile: string; transcriptFile: string; thumbnail: string; date: string } } = {
         'EP01': {
-          title: '인문학과 함께하는 광주',
-          description: '철학, 역사, 문학으로 읽는 우리 지역 이야기',
-          folder: 'Ep01 인문학',
-          audioFile: 'Ep01. 인문학__평생의_동반자,_삶을_보는_눈을_바꾸다_-_연령별_맞춤_활용법부터_일상_속_실천까지.wav',
-          transcriptFile: 'Ep01. 대본.txt',
-          thumbnail: '/podcast/Ep01 인문학/image.png',
-          date: '2025.03.02'
-        },
-        'EP02': {
           title: '원데이클래스 체험기',
           description: '도자기, 캘리그라피와 함께하는 특별한 하루',
-          folder: 'Ep02 원데이클래스',
-          audioFile: 'Ep02. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
-          transcriptFile: 'Ep02. 대본.txt',
-          thumbnail: '/podcast/Ep02 원데이클래스/image.png',
+          folder: 'Ep01 원데이클래스',
+          audioFile: 'Ep01. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
+          transcriptFile: 'Ep01. 대본.txt',
+          thumbnail: '/podcast/Ep01 원데이클래스/image.png',
           date: '2025.06.02'
         },
-        'EP03': {
+        'EP02': {
           title: '문화공연 이야기',
           description: '무대 위에서 펼쳐지는 예술의 향연',
-          folder: 'Ep03 문화예술공연',
-          audioFile: 'Ep03. 문화예술공연을 하는 이유.wav',
-          transcriptFile: 'Ep03. 대본.txt',
-          thumbnail: '/podcast/Ep03 문화예술공연/image.png',
+          folder: 'Ep02 문화예술공연',
+          audioFile: 'Ep02. 문화예술공연을 하는 이유.wav',
+          transcriptFile: 'Ep02. 대본.txt',
+          thumbnail: '/podcast/Ep02 문화예술공연/image.png',
           date: '2025.08.04'
         },
-        'EP04': {
+        'EP03': {
           title: '유창성 착각',
           description: '쉽게 읽히는 글이 정말 이해하기 쉬운 걸까?',
-          folder: 'Ep04 유창성착각',
-          audioFile: 'Ep04. 유창성 착각.wav',
-          transcriptFile: 'Ep04 대본.txt',
-          thumbnail: '/podcast/Ep04 유창성착각/image.png',
+          folder: 'Ep03 유창성착각',
+          audioFile: 'Ep03. 유창성 착각.wav',
+          transcriptFile: 'Ep03 대본.txt',
+          thumbnail: '/podcast/Ep03 유창성착각/image.png',
           date: '2025.08.29'
         }
       };
@@ -277,12 +268,11 @@ const PodcastPlayer = () => {
         <div className={styles.otherEpisodes}>
           <h3>다른 에피소드</h3>
           <div className={styles.episodeList}>
-            {['EP01', 'EP02', 'EP03', 'EP04'].filter(ep => ep !== params.id).map(ep => {
+            {['EP01', 'EP02', 'EP03'].filter(ep => ep !== params.id).map(ep => {
               const titles: { [key: string]: string } = {
-                'EP01': '인문학과 함께하는 광주',
-                'EP02': '원데이클래스 체험기',
-                'EP03': '문화공연 이야기',
-                'EP04': '유창성 착각'
+                'EP01': '원데이클래스 체험기',
+                'EP02': '문화공연 이야기',
+                'EP03': '유창성 착각'
               };
               
               return (

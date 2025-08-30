@@ -125,7 +125,6 @@ export default function PrivacyPage() {
                 <ul>
                   <li>성명: 홍성민</li>
                   <li>직책: 기획운영팀장</li>
-                  <li>연락처: 070-462-7934</li>
                   <li>이메일: privacy@gjcc.or.kr</li>
                 </ul>
               </div>

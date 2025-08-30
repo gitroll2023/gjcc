@@ -13,9 +13,9 @@ export async function GET() {
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>2024년 하반기 인문학 강좌 수강생 모집</title>
+      <title>2024년 하반기 문화예술 프로그램 수강생 모집</title>
       <link>${baseUrl}/notice/1</link>
-      <description>광주문화진흥센터에서 2024년 하반기 인문학 강좌 수강생을 모집합니다. 다양한 주제의 강좌를 준비했으니 많은 관심 부탁드립니다.</description>
+      <description>광주문화진흥센터에서 2024년 하반기 문화예술 프로그램 수강생을 모집합니다. 다양한 주제의 프로그램을 준비했으니 많은 관심 부탁드립니다.</description>
       <pubDate>${new Date('2024-01-15').toUTCString()}</pubDate>
       <guid isPermaLink="true">${baseUrl}/notice/1</guid>
       <category>공지사항</category>
@@ -76,11 +76,11 @@ export async function GET() {
     </item>
     
     <item>
-      <title>인문학 특강 - 광주의 역사와 문화</title>
-      <link>${baseUrl}/program/humanities</link>
-      <description>광주의 역사와 문화를 깊이 있게 탐구하는 인문학 특강을 개최합니다.</description>
+      <title>문화예술 특강 - 광주의 역사와 문화</title>
+      <link>${baseUrl}/program</link>
+      <description>광주의 역사와 문화를 깊이 있게 탐구하는 문화예술 특강을 개최합니다.</description>
       <pubDate>${new Date('2023-12-05').toUTCString()}</pubDate>
-      <guid isPermaLink="true">${baseUrl}/humanities-special</guid>
+      <guid isPermaLink="true">${baseUrl}/culture-special</guid>
       <category>프로그램</category>
     </item>
     

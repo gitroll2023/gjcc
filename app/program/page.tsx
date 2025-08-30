@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaBook, FaPalette, FaMusic, FaArrowRight } from 'react-icons/fa';
+import { FaPalette, FaMusic, FaArrowRight } from 'react-icons/fa';
 import HeroSection from '@/app/components/common/HeroSection';
 import OnedayGallery from '@/app/components/OnedayGallery';
 import styles from './page.module.css';
@@ -10,23 +10,14 @@ import styles from './page.module.css';
 const ProgramPage = () => {
   const programs = [
     {
-      title: '🦢 원앤온(One & On) 인문학',
-      description: '원데이클래스(30분) + 인문학강의(1시간) 통합 프로그램',
-      icon: <FaBook />,
-      href: '/program/humanities',
-      image: '/one&on.jpg',
-      features: ['9월 9,11,16,18일', '오후 2시/저녁 7시 30분', '쿠킹+핸드메이드', '체험비: 회당 5천원'],
-      color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      special: true
-    },
-    {
       title: '원데이 클래스',
       description: '하루만에 완성하는 특별한 취미 생활',
       icon: <FaPalette />,
       href: '/program/oneday',
       image: '/images/oneday.jpg',
       features: ['도자기 만들기', '캘리그라피', '커피 브루잉'],
-      color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+      color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      special: true
     },
     {
       title: '문화공연',
@@ -56,7 +47,7 @@ const ProgramPage = () => {
           <p>
             광주문화진흥센터는 시민 여러분의 삶을 더욱 풍요롭게 만들기 위해
             다양한 문화 프로그램을 운영하고 있습니다. 
-            인문학부터 예술, 공연까지 여러분의 관심사에 맞는 프로그램을 찾아보세요.
+            예술과 공연까지 여러분의 관심사에 맞는 프로그램을 찾아보세요.
           </p>
         </section>
 
@@ -105,14 +96,12 @@ const ProgramPage = () => {
               <h3>신청 방법</h3>
               <ul>
                 <li>온라인: 홈페이지에서 신청</li>
-                <li>오프라인: 센터  안내데스크</li>
-                <li>전화: 070-462-7934</li>
+                <li>오프라인: 센터 안내데스크</li>
               </ul>
             </div>
             <div className={styles.infoCard}>
               <h3>수강료 안내</h3>
               <ul>
-                <li>인문학 프로그램: 무료</li>
                 <li>원데이 클래스: 30,000원~</li>
                 <li>문화공연: 10,000원~</li>
               </ul>

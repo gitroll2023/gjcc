@@ -104,7 +104,7 @@ const mockEvents: Event[] = [
   {
     id: 8,
     title: '시민 문화 강좌',
-    description: '문학, 역사, 철학 등 다양한 인문학 강좌 프로그램입니다.',
+    description: '다양한 문화예술 강좌 프로그램입니다.',
     startDate: '2025-06-20',
     endDate: '2025-07-20',
     category: '교육',

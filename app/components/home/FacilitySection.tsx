@@ -12,26 +12,26 @@ const FacilitySection = () => {
     {
       id: 1,
       name: 'One & On 클래스',
-      description: '원데이클래스 + 인문학강의 통합 프로그램',
+      description: '원데이클래스 + 문화예술 통합 프로그램',
       image: '/one&on.jpg',
     },
     {
       id: 2,
       name: '공방 클래스',
       description: '창의적인 작품 만들기',
-      image: '/photo/ONE/공방5.png',
+      image: '/photo/ONE/공방9.jpg',
     },
     {
       id: 3,
       name: '공방 클래스',
       description: '다양한 공예 체험',
-      image: '/photo/ONE/공방10.png',
+      image: '/photo/ONE/공방21.jpg',
     },
     {
       id: 4,
       name: '쿠킹 클래스',
       description: '맛있는 요리와 베이킹',
-      image: '/photo/ONE/쿠킹2.png',
+      image: '/photo/ONE/쿠킹3.png',
     },
     {
       id: 5,

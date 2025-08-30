@@ -18,37 +18,28 @@ const VideoSection = () => {
   const podcasts = [
     {
       id: 'EP01',
-      title: '[EP.01] 인문학과 함께하는 광주',
-      description: '철학, 역사, 문학으로 읽는 우리 지역 이야기',
-      thumbnail: '/podcast/Ep01 인문학/image.png',
-      audioFile: '/podcast/Ep01 인문학/Ep01. 인문학__평생의_동반자,_삶을_보는_눈을_바꾸다_-_연령별_맞춤_활용법부터_일상_속_실천까지.wav',
-      duration: '08:21',
-      date: '2025.03.02',
-    },
-    {
-      id: 'EP02',
-      title: '[EP.02] 원데이클래스 체험기',
+      title: '[EP.01] 원데이클래스 체험기',
       description: '도자기, 캘리그라피와 함께하는 특별한 하루',
-      thumbnail: '/podcast/Ep02 원데이클래스/image.png',
-      audioFile: '/podcast/Ep02 원데이클래스/Ep02. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
+      thumbnail: '/podcast/Ep01 원데이클래스/image.png',
+      audioFile: '/podcast/Ep01 원데이클래스/Ep01. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
       duration: '06:12',
       date: '2025.06.02',
     },
     {
-      id: 'EP03',
-      title: '[EP.03] 문화공연 이야기',
+      id: 'EP02',
+      title: '[EP.02] 문화공연 이야기',
       description: '무대 위에서 펼쳐지는 예술의 향연',
-      thumbnail: '/podcast/Ep03 문화예술공연/image.png',
-      audioFile: '/podcast/Ep03 문화예술공연/Ep03. 문화예술공연을 하는 이유.wav',
+      thumbnail: '/podcast/Ep02 문화예술공연/image.png',
+      audioFile: '/podcast/Ep02 문화예술공연/Ep02. 문화예술공연을 하는 이유.wav',
       duration: '05:22',
       date: '2025.08.04',
     },
     {
-      id: 'EP04',
-      title: '[EP.04] 유창성 착각',
+      id: 'EP03',
+      title: '[EP.03] 유창성 착각',
       description: '쉽게 읽히는 글이 정말 이해하기 쉬운 걸까?',
-      thumbnail: '/podcast/Ep04 유창성착각/image.png',
-      audioFile: '/podcast/Ep04 유창성착각/Ep04. 유창성 착각.wav',
+      thumbnail: '/podcast/Ep03 유창성착각/image.png',
+      audioFile: '/podcast/Ep03 유창성착각/Ep03. 유창성 착각.wav',
       duration: '04:12',
       date: '2025.08.29',
     },
@@ -142,8 +133,8 @@ const VideoSection = () => {
         
         <Swiper
           modules={[Navigation]}
-          spaceBetween={25}
-          slidesPerView={4}
+          spaceBetween={30}
+          slidesPerView={3}
           navigation
           centeredSlides={false}
           allowTouchMove={true}
@@ -170,12 +161,7 @@ const VideoSection = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 25,
-              centeredSlides: false,
-            },
-            1280: {
-              slidesPerView: 4,
-              spaceBetween: 25,
+              spaceBetween: 30,
               centeredSlides: false,
             },
           }}

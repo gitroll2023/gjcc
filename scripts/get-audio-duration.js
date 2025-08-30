@@ -34,18 +34,18 @@ const podcastDir = path.join(__dirname, '..', 'public', 'podcast');
 
 const episodes = [
   { 
-    folder: 'Ep01 인문학',
-    file: 'Ep01. 인문학__평생의_동반자,_삶을_보는_눈을_바꾸다_-_연령별_맞춤_활용법부터_일상_속_실천까지.wav',
-    type: 'wav'
-  },
-  {
-    folder: 'Ep02 원데이클래스',
-    file: 'Ep02. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
+    folder: 'Ep01 원데이클래스',
+    file: 'Ep01. 딱_하루의_기적__원데이클래스로_찾은_성취감과_새로운_일상.mp3',
     type: 'mp3'
   },
   {
-    folder: 'Ep03 문화예술공연',
-    file: 'Ep03. 문화예술공연을 하는 이유.wav',
+    folder: 'Ep02 문화예술공연',
+    file: 'Ep02. 문화예술공연을 하는 이유.wav',
+    type: 'wav'
+  },
+  {
+    folder: 'Ep03 유창성착각',
+    file: 'Ep03. 유창성 착각.wav',
     type: 'wav'
   }
 ];
