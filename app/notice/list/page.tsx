@@ -451,7 +451,7 @@ export default function NoticeListPage() {
                 </tr>
               </thead>
               <tbody>
-                {paginatedNotices.map((notice, index) => (
+                {paginatedNotices.map((notice) => (
                   <tr key={notice.id}>
                     <td className={styles.tdCategory}>
                       <span className={styles.categoryBadge}>{notice.category}</span>
