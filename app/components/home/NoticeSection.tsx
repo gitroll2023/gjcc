@@ -51,25 +51,37 @@ const NoticeSection = () => {
     }
   ];
 
-  // 채용 공고 데이터
+  // 채용/입찰 공고 데이터
   const recruits: Notice[] = [
     {
-      id: 101,
+      id: 37,
       title: '2025년 하반기 문화예술 강사 모집',
       date: '2025-08-15',
       category: '채용'
     },
     {
-      id: 102,
+      id: 38,
       title: '시설관리 계약직 채용 공고',
       date: '2025-08-10',
       category: '채용'
     },
     {
-      id: 103,
+      id: 39,
       title: '공연기획팀 정규직 채용 안내',
       date: '2025-07-28',
       category: '채용'
+    },
+    {
+      id: 40,
+      title: '2025년 센터 청소용역 입찰 공고',
+      date: '2025-08-12',
+      category: '입찰'
+    },
+    {
+      id: 41,
+      title: '무대음향장비 구매 입찰 안내',
+      date: '2025-08-05',
+      category: '입찰'
     }
   ];
 

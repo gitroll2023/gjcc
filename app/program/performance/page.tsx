@@ -275,26 +275,6 @@ const PerformancePage = () => {
           </div>
         </section>
 
-        <section className={styles.venueSection}>
-          <h3>공연장 안내</h3>
-          <div className={styles.venueGrid}>
-            <div className={styles.venueCard}>
-              <h4>대공연장</h4>
-              <p>500석 규모의 메인 공연장</p>
-              <p>클래식, 오케스트라 공연</p>
-            </div>
-            <div className={styles.venueCard}>
-              <h4>소극장</h4>
-              <p>150석 규모의 아담한 공간</p>
-              <p>연극, 실내악 공연</p>
-            </div>
-            <div className={styles.venueCard}>
-              <h4>야외공연장</h4>
-              <p>300석 규모의 야외 무대</p>
-              <p>재즈, 버스킹 공연</p>
-            </div>
-          </div>
-        </section>
 
         <section className={styles.ctaSection}>
           <h3>문화공연과 함께하는<br />특별한 시간</h3>

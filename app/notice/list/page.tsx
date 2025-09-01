@@ -64,7 +64,7 @@ const mockNotices: Notice[] = [
   // 2025년 7월
   {
     id: 6,
-    title: '광주 현대미술 전시회 전시 기간 연장 안내',
+    title: '현대미술 전시회 전시 기간 연장 안내',
     date: '2025-07-25',
     views: 203,
     category: '안내',
@@ -261,7 +261,7 @@ const mockNotices: Notice[] = [
   // 2024년 6월
   {
     id: 29,
-    title: '광주 사진 공모전 전시회 개최',
+    title: '사진 공모전 전시회 개최',
     date: '2024-06-01',
     views: 389,
     category: '공지',
@@ -327,6 +327,48 @@ const mockNotices: Notice[] = [
     views: 712,
     category: '공지',
     department: '센터장'
+  },
+  // 채용 공고
+  {
+    id: 37,
+    title: '2025년 하반기 문화예술 강사 모집',
+    date: '2025-08-15',
+    views: 234,
+    category: '채용',
+    department: '인사관리팀'
+  },
+  {
+    id: 38,
+    title: '시설관리 계약직 채용 공고',
+    date: '2025-08-10',
+    views: 189,
+    category: '채용',
+    department: '인사관리팀'
+  },
+  {
+    id: 39,
+    title: '공연기획팀 정규직 채용 안내',
+    date: '2025-07-28',
+    views: 412,
+    category: '채용',
+    department: '인사관리팀'
+  },
+  // 입찰 공고
+  {
+    id: 40,
+    title: '2025년 센터 청소용역 입찰 공고',
+    date: '2025-08-12',
+    views: 156,
+    category: '입찰',
+    department: '시설관리팀'
+  },
+  {
+    id: 41,
+    title: '무대음향장비 구매 입찰 안내',
+    date: '2025-08-05',
+    views: 178,
+    category: '입찰',
+    department: '공연기획팀'
   }
 ];
 
@@ -359,7 +401,7 @@ export default function NoticeListPage() {
     <div className={styles.container}>
       <HeroSection 
         title="공지사항"
-        description="광주문화진흥센터의 새로운 소식과 공지사항을 확인하세요"
+        description="문화진흥센터의 새로운 소식과 공지사항을 확인하세요"
         breadcrumbs={breadcrumbs}
         backgroundGradient="linear-gradient(135deg, #2c3e50 0%, #34495e 100%)"
       />
@@ -401,7 +443,6 @@ export default function NoticeListPage() {
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th className={styles.thNumber}>번호</th>
                   <th className={styles.thCategory}>구분</th>
                   <th className={styles.thTitle}>제목</th>
                   <th className={styles.thDepartment}>담당부서</th>
@@ -412,13 +453,6 @@ export default function NoticeListPage() {
               <tbody>
                 {paginatedNotices.map((notice, index) => (
                   <tr key={notice.id}>
-                    <td className={styles.tdNumber}>
-                      {notice.isImportant ? (
-                        <span className={styles.importantBadge}>공지</span>
-                      ) : (
-                        filteredNotices.length - startIndex - index
-                      )}
-                    </td>
                     <td className={styles.tdCategory}>
                       <span className={styles.categoryBadge}>{notice.category}</span>
                     </td>
