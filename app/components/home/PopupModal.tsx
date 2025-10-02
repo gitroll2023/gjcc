@@ -13,13 +13,13 @@ const PopupModal = () => {
   ];
 
   useEffect(() => {
-    // 쿠키 확인 - 24시간 동안 보지 않기
-    const hidePopup = Cookies.get('hidePopup');
-    if (!hidePopup) {
-      setTimeout(() => {
-        setIsOpen(true);
-      }, 1000);
-    }
+    // 임시 비활성화 - 10월 프로그램 준비 중
+    // const hidePopup = Cookies.get('hidePopup');
+    // if (!hidePopup) {
+    //   setTimeout(() => {
+    //     setIsOpen(true);
+    //   }, 1000);
+    // }
   }, []);
 
   const handleClose = () => {
