@@ -202,6 +202,10 @@ const ApplyPage = () => {
                   <span className={styles.noticeNumber}>2</span>
                   <p>체험 재료비: 회당 5천원</p>
                 </div>
+                <div className={styles.noticeItem}>
+                  <span className={styles.noticeNumber}>3</span>
+                  <p>입금계좌: 카카오뱅크 3333-33-7846805 (예금주: 이미현)</p>
+                </div>
               </div>
             </div>
 
