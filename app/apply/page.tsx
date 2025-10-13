@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaExclamationCircle } from 'react-icons/fa';
-import HeroSection from '@/app/components/common/HeroSection';
 import styles from './page.module.css';
 
 const ApplyPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showPosterModal, setShowPosterModal] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -67,21 +67,69 @@ const ApplyPage = () => {
 
   return (
     <>
-      <HeroSection 
-        title="One & On"
-        description="광주문화진흥센터 프로그램"
-        breadcrumbs={[
-          { label: '홈', href: '/' },
-          { label: 'One & On' }
-        ]}
-      />
+      <div style={{ 
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        minHeight: '400px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        textAlign: 'center',
+        position: 'relative',
+        paddingTop: '120px',
+        paddingBottom: '120px'
+      }}>
+        <div style={{ 
+          position: 'absolute', 
+          top: 0, 
+          left: 0, 
+          right: 0, 
+          bottom: 0, 
+          background: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'2\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          opacity: 0.3
+        }}></div>
+        <div style={{ 
+          position: 'relative', 
+          zIndex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+          marginTop: '150px'
+        }}>
+          <p style={{ 
+            fontSize: '1.8rem', 
+            marginBottom: '1rem',
+            fontFamily: 'YeogiOttaeJalnan, Pretendard, sans-serif',
+            fontWeight: 'normal'
+          }}>
+            광주문화진흥센터 프로그램
+          </p>
+          <div style={{ 
+            fontSize: '1.4rem',
+            fontFamily: 'Pretendard, sans-serif',
+            fontWeight: '500'
+          }}>
+            <a href="/" style={{ color: 'white', textDecoration: 'none' }}>홈</a>
+            <span style={{ margin: '0 0.5rem' }}>/</span>
+            <span>One & On</span>
+          </div>
+        </div>
+      </div>
 
       <div className={styles.container}>
         {/* One & On Class Section */}
         <section className={styles.oneOnSection}>
           <div className={styles.oneOnHeader}>
-            <h1 className={styles.mainTitle}>🦢 원앤온 클래스</h1>
+            <h1 className={styles.mainTitle}>👠 10월 원앤온 클래스</h1>
             <p className={styles.subtitle}>One & On 살펴보기</p>
+            <button 
+              onClick={() => setShowPosterModal(true)}
+              className={styles.posterButton}
+            >
+              📋 포스터 보기
+            </button>
           </div>
 
           <div className={styles.oneOnCard}>
@@ -92,14 +140,14 @@ const ApplyPage = () => {
                   <FaCalendarAlt className={styles.icon} />
                   <div>
                     <strong>날짜</strong>
-                    <p>9월 9일, 11일, 16일, 18일 (화, 목)</p>
+                    <p>14일(화), 16일(목), 20일(월), 21일(화)</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
                   <FaClock className={styles.icon} />
                   <div>
                     <strong>시간</strong>
-                    <p>오후 2시 / 저녁 7시 반</p>
+                    <p>오후 2시, 저녁 7시 반</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
@@ -122,11 +170,6 @@ const ApplyPage = () => {
                 </h3>
                 <div className={styles.classContent}>
                   <div className={styles.classItem}>
-                    <span className={styles.date}>9일, 16일 (화)</span>
-                    <span className={styles.classType}>쿠킹 클래스</span>
-                  </div>
-                  <div className={styles.classItem}>
-                    <span className={styles.date}>11일, 18일 (목)</span>
                     <span className={styles.classType}>핸드메이드 클래스</span>
                   </div>
                 </div>
@@ -139,7 +182,7 @@ const ApplyPage = () => {
                 </h3>
                 <div className={styles.classContent}>
                   <div className={styles.classItem}>
-                    <span className={styles.classType}>인문학 강의</span>
+                    <span className={styles.classType}>프리미엄 강연</span>
                   </div>
                 </div>
               </div>
@@ -148,14 +191,16 @@ const ApplyPage = () => {
             <div className={styles.noticeSection}>
               <h2 className={styles.noticeTitle}>
                 <FaExclamationCircle className={styles.noticeIcon} />
-                공지사항
+                🔴 공지사항
               </h2>
               <div className={styles.noticeContent}>
-               
                 <div className={styles.noticeItem}>
-                  <span className={styles.noticeNumber}>필독</span>
-                  <p>체험재료비: <strong>회당 5천원</strong><br />
-                      입금계좌: 카카오뱅크 3333-33-7846805 이미현</p>
+                  <span className={styles.noticeNumber}>1</span>
+                  <p>1교시 원데이 클래스 의무 참석입니다.</p>
+                </div>
+                <div className={styles.noticeItem}>
+                  <span className={styles.noticeNumber}>2</span>
+                  <p>체험 재료비: 회당 5천원</p>
                 </div>
               </div>
             </div>
@@ -358,6 +403,33 @@ const ApplyPage = () => {
             >
               확인
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Poster Modal */}
+      {showPosterModal && (
+        <div className={styles.modalOverlay} onClick={() => setShowPosterModal(false)}>
+          <div className={styles.posterModal} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalHeader}>
+              <h3 className={styles.modalTitle}>10월 원앤온 클래스 포스터</h3>
+              <button 
+                type="button"
+                className={styles.closeButton}
+                onClick={() => setShowPosterModal(false)}
+                aria-label="닫기"
+              >
+                ×
+              </button>
+            </div>
+            
+            <div className={styles.posterContainer}>
+              <img 
+                src="/one&on.jpg" 
+                alt="10월 원앤온 클래스 포스터" 
+                className={styles.posterImage}
+              />
+            </div>
           </div>
         </div>
       )}

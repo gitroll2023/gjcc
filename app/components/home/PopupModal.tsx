@@ -9,17 +9,16 @@ const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const popupSlides = [
-    { id: 1, image: '/one&on.jpg', link: '/apply' },
+    { id: 1, image: '/popup.jpg', link: '/apply' },
   ];
 
   useEffect(() => {
-    // 임시 비활성화 - 10월 프로그램 준비 중
-    // const hidePopup = Cookies.get('hidePopup');
-    // if (!hidePopup) {
-    //   setTimeout(() => {
-    //     setIsOpen(true);
-    //   }, 1000);
-    // }
+    const hidePopup = Cookies.get('hidePopup');
+    if (!hidePopup) {
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 1000);
+    }
   }, []);
 
   const handleClose = () => {

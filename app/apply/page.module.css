@@ -300,6 +300,26 @@
   font-size: 18px;
   color: #6c757d;
   font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.posterButton {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.posterButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
 
 .oneOnCard {
@@ -354,6 +374,7 @@
   color: #2c3e50;
   margin: 0;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .curriculum {
@@ -607,6 +628,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+  }
+
+  .infoItem p {
+    white-space: normal;
+    font-size: 14px;
   }
 
   .applyBtn {
@@ -1033,4 +1059,56 @@
   100% {
     transform: scale(1) rotate(360deg);
   }
+}
+
+/* Poster Modal Styles */
+.posterModal {
+  background: white;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+}
+
+.posterContainer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.posterImage {
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.posterFooter {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posterFooter .closeButton {
+  padding: 12px 30px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
 }

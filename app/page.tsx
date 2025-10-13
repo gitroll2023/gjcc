@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {/* 팝업 모달 */}
       <PopupModal />
-      
+
       {/* 메인 비주얼 */}
       <MainVisual />
       
