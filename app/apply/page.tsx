@@ -7,7 +7,6 @@ import styles from './page.module.css';
 const ApplyPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showPosterModal, setShowPosterModal] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -122,14 +121,8 @@ const ApplyPage = () => {
         {/* One & On Class Section */}
         <section className={styles.oneOnSection}>
           <div className={styles.oneOnHeader}>
-            <h1 className={styles.mainTitle}>👠 10월 원앤온 클래스</h1>
+            <h1 className={styles.mainTitle}>👠 12월 원앤온 클래스</h1>
             <p className={styles.subtitle}>One & On 살펴보기</p>
-            <button 
-              onClick={() => setShowPosterModal(true)}
-              className={styles.posterButton}
-            >
-              📋 포스터 보기
-            </button>
           </div>
 
           <div className={styles.oneOnCard}>
@@ -140,14 +133,14 @@ const ApplyPage = () => {
                   <FaCalendarAlt className={styles.icon} />
                   <div>
                     <strong>날짜</strong>
-                    <p>14일(화), 16일(목), 20일(월), 21일(화)</p>
+                    <p>8일(월), 11일(목), 15일(월), 18일(목)</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
                   <FaClock className={styles.icon} />
                   <div>
                     <strong>시간</strong>
-                    <p>오후 2시, 저녁 7시 반</p>
+                    <p>오후 2시, 저녁 7시 30분</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
@@ -162,7 +155,7 @@ const ApplyPage = () => {
 
             <div className={styles.curriculum}>
               <h2 className={styles.sectionTitle}>커리큘럼</h2>
-              
+
               <div className={styles.classSection}>
                 <h3 className={styles.classTitle}>
                   <span className={styles.classNumber}>1교시</span>
@@ -170,7 +163,16 @@ const ApplyPage = () => {
                 </h3>
                 <div className={styles.classContent}>
                   <div className={styles.classItem}>
-                    <span className={styles.classType}>핸드메이드 클래스</span>
+                    <span className={styles.classType}>8일(월): 쿠킹 클래스</span>
+                  </div>
+                  <div className={styles.classItem}>
+                    <span className={styles.classType}>11일(목): 핸드메이드</span>
+                  </div>
+                  <div className={styles.classItem}>
+                    <span className={styles.classType}>15일(월): 핸드메이드</span>
+                  </div>
+                  <div className={styles.classItem}>
+                    <span className={styles.classType}>16일(화): 쿠킹 클래스</span>
                   </div>
                 </div>
               </div>
@@ -178,11 +180,11 @@ const ApplyPage = () => {
               <div className={styles.classSection}>
                 <h3 className={styles.classTitle}>
                   <span className={styles.classNumber}>2교시</span>
-                  온클래스
+                  온클래스: 초청 강의
                 </h3>
                 <div className={styles.classContent}>
                   <div className={styles.classItem}>
-                    <span className={styles.classType}>프리미엄 강연</span>
+                    <span className={styles.classType}>초청 강연</span>
                   </div>
                 </div>
               </div>
@@ -205,6 +207,10 @@ const ApplyPage = () => {
                 <div className={styles.noticeItem}>
                   <span className={styles.noticeNumber}>3</span>
                   <p>입금계좌: 카카오뱅크 3333-33-7846805 (예금주: 이미현)</p>
+                </div>
+                <div className={styles.noticeItem}>
+                  <span className={styles.noticeNumber}>4</span>
+                  <p>신청: 방문 또는 홈페이지 접수</p>
                 </div>
               </div>
             </div>
@@ -407,33 +413,6 @@ const ApplyPage = () => {
             >
               확인
             </button>
-          </div>
-        </div>
-      )}
-
-      {/* Poster Modal */}
-      {showPosterModal && (
-        <div className={styles.modalOverlay} onClick={() => setShowPosterModal(false)}>
-          <div className={styles.posterModal} onClick={(e) => e.stopPropagation()}>
-            <div className={styles.modalHeader}>
-              <h3 className={styles.modalTitle}>10월 원앤온 클래스 포스터</h3>
-              <button 
-                type="button"
-                className={styles.closeButton}
-                onClick={() => setShowPosterModal(false)}
-                aria-label="닫기"
-              >
-                ×
-              </button>
-            </div>
-            
-            <div className={styles.posterContainer}>
-              <img 
-                src="/one&on.jpg" 
-                alt="10월 원앤온 클래스 포스터" 
-                className={styles.posterImage}
-              />
-            </div>
           </div>
         </div>
       )}

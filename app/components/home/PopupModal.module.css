@@ -17,8 +17,8 @@
   border-radius: 15px;
   max-width: 600px;
   width: 90%;
-  max-height: 80vh;
-  overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
   animation: slideUp 0.3s ease-out;
 }
 
@@ -139,6 +139,177 @@
   box-shadow: 0 5px 15px rgba(255, 187, 51, 0.3);
 }
 
+/* Program Information Styles */
+.programInfo {
+  padding: 30px;
+  max-height: none;
+  overflow-y: visible;
+}
+
+.infoSection {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 3px solid var(--main-color);
+}
+
+.infoRow .icon {
+  color: var(--main-color);
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.infoContent {
+  flex: 1;
+}
+
+.infoContent strong {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--main-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.infoContent p {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.curriculum {
+  margin-bottom: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-section);
+  font-size: 18px;
+  color: var(--main-color);
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.classSection {
+  margin-bottom: 15px;
+}
+
+.classSection:last-child {
+  margin-bottom: 0;
+}
+
+.classTitle {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: #495057;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.classList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+}
+
+.classList li {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: #495057;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.classList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--sub-color);
+  font-weight: bold;
+}
+
+.paymentInfo {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff3cd;
+  border-radius: 10px;
+  border: 1px solid #ffc107;
+}
+
+.feeInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.feeInfo .icon {
+  color: #ffc107;
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.feeInfo strong,
+.accountInfo strong {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: #856404;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.feeInfo p,
+.accountInfo p {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.accountInfo {
+  padding-top: 15px;
+  border-top: 1px dashed #ffc107;
+}
+
+.applyInfo {
+  text-align: center;
+  padding: 15px;
+  background: #e7f3ff;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+}
+
+.applyInfo p {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -164,33 +335,99 @@
     max-width: 95%;
     max-height: 90vh;
   }
-  
+
   .imageContainer {
     max-height: 350px;
   }
-  
+
   .imageContainer img {
     max-height: 350px;
   }
-  
+
+  .programInfo {
+    padding: 20px;
+    max-height: none;
+  }
+
+  .infoRow {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .infoRow .icon {
+    font-size: 18px;
+  }
+
+  .infoContent strong {
+    font-size: 13px;
+  }
+
+  .infoContent p {
+    font-size: 14px;
+  }
+
+  .curriculum {
+    padding: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .classTitle {
+    font-size: 14px;
+  }
+
+  .classList li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .paymentInfo {
+    padding: 15px;
+  }
+
+  .feeInfo .icon {
+    font-size: 18px;
+  }
+
+  .feeInfo strong,
+  .accountInfo strong {
+    font-size: 13px;
+  }
+
+  .feeInfo p,
+  .accountInfo p {
+    font-size: 14px;
+  }
+
+  .applyInfo p {
+    font-size: 14px;
+  }
+
   .detailButton {
     padding: 10px 24px;
     font-size: 14px;
     margin-bottom: 10px;
   }
-  
+
   .modalHeader {
     padding: 15px 20px;
   }
-  
+
+  .modalTitle {
+    font-size: 18px;
+  }
+
   .modalFooter {
     padding: 15px 20px;
   }
-  
+
   .footerButtons {
     flex-direction: column;
   }
-  
+
   .todayCloseButton {
     width: 100%;
   }
