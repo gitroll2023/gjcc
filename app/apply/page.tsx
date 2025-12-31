@@ -21,22 +21,22 @@ const ApplyPage = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    
+
     if (name === 'phone') {
       // 숫자만 추출
       const numbers = value.replace(/[^\d]/g, '');
-      
+
       // 최대 8자리만 허용 (010 제외)
       if (numbers.length > 8) {
         return;
       }
-      
+
       // 하이픈 자동 추가
       let formattedNumber = numbers;
       if (numbers.length > 4) {
         formattedNumber = numbers.slice(0, 4) + '-' + numbers.slice(4);
       }
-      
+
       setFormData(prev => ({
         ...prev,
         phone: formattedNumber
@@ -66,7 +66,7 @@ const ApplyPage = () => {
 
   return (
     <>
-      <div style={{ 
+      <div style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         minHeight: '400px',
         display: 'flex',
@@ -78,17 +78,17 @@ const ApplyPage = () => {
         paddingTop: '120px',
         paddingBottom: '120px'
       }}>
-        <div style={{ 
-          position: 'absolute', 
-          top: 0, 
-          left: 0, 
-          right: 0, 
-          bottom: 0, 
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'2\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
           opacity: 0.3
         }}></div>
-        <div style={{ 
-          position: 'relative', 
+        <div style={{
+          position: 'relative',
           zIndex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -97,15 +97,15 @@ const ApplyPage = () => {
           height: '100%',
           marginTop: '150px'
         }}>
-          <p style={{ 
-            fontSize: '1.8rem', 
+          <p style={{
+            fontSize: '1.8rem',
             marginBottom: '1rem',
             fontFamily: 'YeogiOttaeJalnan, Pretendard, sans-serif',
             fontWeight: 'normal'
           }}>
             광주문화진흥센터 프로그램
           </p>
-          <div style={{ 
+          <div style={{
             fontSize: '1.4rem',
             fontFamily: 'Pretendard, sans-serif',
             fontWeight: '500'
@@ -121,7 +121,7 @@ const ApplyPage = () => {
         {/* One & On Class Section */}
         <section className={styles.oneOnSection}>
           <div className={styles.oneOnHeader}>
-            <h1 className={styles.mainTitle}>👠 12월 원앤온 클래스</h1>
+            <h1 className={styles.mainTitle}>🐩 1월 원앤온 클래스</h1>
             <p className={styles.subtitle}>One & On 살펴보기</p>
           </div>
 
@@ -132,8 +132,8 @@ const ApplyPage = () => {
                 <div className={styles.infoItem}>
                   <FaCalendarAlt className={styles.icon} />
                   <div>
-                    <strong>날짜</strong>
-                    <p>8일(월), 11일(목), 15일(월), 18일(목)</p>
+                    <strong>진행일</strong>
+                    <p>1월 5일, 8일, 12일, 15일(월목, 총4회)</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
@@ -146,51 +146,32 @@ const ApplyPage = () => {
                 <div className={styles.infoItem}>
                   <FaMapMarkerAlt className={styles.icon} />
                   <div>
-                    <strong>주최</strong>
-                    <p>광주문화진흥센터</p>
+                    <strong>장소</strong>
+                    <p>별도공지</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className={styles.curriculum}>
-              <h2 className={styles.sectionTitle}>커리큘럼</h2>
+              <h2 className={styles.sectionTitle}>프로그램</h2>
 
               <div className={styles.classSection}>
                 <h3 className={styles.classTitle}>
                   <span className={styles.classNumber}>1교시</span>
                   원데이 클래스
                 </h3>
-                <div className={styles.classContent}>
-                  <div className={styles.classItem}>
-                    <span className={styles.classType}>8일(월): 쿠킹 클래스</span>
-                  </div>
-                  <div className={styles.classItem}>
-                    <span className={styles.classType}>11일(목): 핸드메이드</span>
-                  </div>
-                  <div className={styles.classItem}>
-                    <span className={styles.classType}>15일(월): 핸드메이드</span>
-                  </div>
-                  <div className={styles.classItem}>
-                    <span className={styles.classType}>16일(화): 쿠킹 클래스</span>
-                  </div>
-                </div>
               </div>
 
               <div className={styles.classSection}>
                 <h3 className={styles.classTitle}>
                   <span className={styles.classNumber}>2교시</span>
-                  온클래스: 초청 강의
+                  온클래스: 강의
                 </h3>
-                <div className={styles.classContent}>
-                  <div className={styles.classItem}>
-                    <span className={styles.classType}>초청 강연</span>
-                  </div>
-                </div>
               </div>
             </div>
 
-            <div className={styles.noticeSection}>
+            {/* <div className={styles.noticeSection}>
               <h2 className={styles.noticeTitle}>
                 <FaExclamationCircle className={styles.noticeIcon} />
                 🔴 공지사항
@@ -213,7 +194,7 @@ const ApplyPage = () => {
                   <p>신청: 방문 또는 홈페이지 접수</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className={styles.applySection}>
               <button className={styles.applyBtn} onClick={handleApply}>
@@ -230,7 +211,7 @@ const ApplyPage = () => {
           <div className={styles.applicationModal} onClick={(e) => e.stopPropagation()}>
             <div className={styles.modalHeader}>
               <h3 className={styles.modalTitle}>프로그램 신청서</h3>
-              <button 
+              <button
                 type="button"
                 className={styles.closeButton}
                 onClick={() => setShowModal(false)}
@@ -239,11 +220,11 @@ const ApplyPage = () => {
                 ×
               </button>
             </div>
-            
+
             <form onSubmit={handleSubmit} className={styles.applicationForm}>
               <div className={styles.formSection}>
                 <h4 className={styles.formSectionTitle}>신청자 정보</h4>
-                
+
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.label}>
                     이름 <span className={styles.required}>*</span>
@@ -329,7 +310,7 @@ const ApplyPage = () => {
 
               <div className={styles.formSection}>
                 <h4 className={styles.formSectionTitle}>추가 사항</h4>
-                
+
                 <div className={styles.formGroup}>
                   <label htmlFor="message" className={styles.label}>
                     요청사항
