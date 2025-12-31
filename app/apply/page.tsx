@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaExclamationCircle } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './page.module.css';
 
 const ApplyPage = () => {
