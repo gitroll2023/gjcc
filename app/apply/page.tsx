@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+// import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './page.module.css';
 
 const ApplyPage = () => {
@@ -15,9 +15,9 @@ const ApplyPage = () => {
     message: ''
   });
 
-  const handleApply = () => {
-    setShowModal(true);
-  };
+  // const handleApply = () => {
+  //   setShowModal(true);
+  // };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
