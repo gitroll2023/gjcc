@@ -3,7 +3,7 @@ import NoticeSection from './components/home/NoticeSection';
 import VideoSection from './components/home/VideoSection';
 import FacilitySection from './components/home/FacilitySection';
 import PartnerSection from './components/home/PartnerSection';
-import PopupModal from './components/home/PopupModal';
+// import PopupModal from './components/home/PopupModal';
 
 export default function Home() {
   return (
