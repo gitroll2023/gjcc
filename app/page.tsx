@@ -9,20 +9,20 @@ export default function Home() {
   return (
     <>
       {/* 팝업 모달 */}
-      <PopupModal />
+      {/* <PopupModal /> */}
 
       {/* 메인 비주얼 */}
       <MainVisual />
-      
+
       {/* 공지사항 섹션 */}
       <NoticeSection />
-      
+
       {/* 홍보영상 섹션 */}
       <VideoSection />
-      
+
       {/* 시설안내 섹션 */}
       <FacilitySection />
-      
+
       {/* 유관기관 섹션 */}
       <PartnerSection />
     </>

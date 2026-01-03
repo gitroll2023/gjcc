@@ -118,7 +118,33 @@ const ApplyPage = () => {
       </div>
 
       <div className={styles.container}>
-        {/* One & On Class Section */}
+        <div style={{
+          textAlign: 'center',
+          padding: '120px 0',
+          color: '#666'
+        }}>
+          {/* <FaTools size={60} color="#cbd5e0" style={{ marginBottom: '24px' }} /> */}
+          <div style={{ fontSize: '4rem', marginBottom: '20px' }}>🚧</div>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            marginBottom: '16px',
+            color: '#2d3748'
+          }}>
+            서비스 준비중입니다
+          </h2>
+          <p style={{
+            fontSize: '1.1rem',
+            lineHeight: '1.6',
+            color: '#718096'
+          }}>
+            더 나은 서비스를 위해 페이지를 준비하고 있습니다.<br />
+            빠른 시일 내에 찾아뵙겠습니다.
+          </p>
+        </div>
+
+        {/* 기존 신청 페이지 내용 보존 */}
+        {/*
         <section className={styles.oneOnSection}>
           <div className={styles.oneOnHeader}>
             <h1 className={styles.mainTitle}>🐩 1월 원앤온 클래스</h1>
@@ -171,31 +197,6 @@ const ApplyPage = () => {
               </div>
             </div>
 
-            {/* <div className={styles.noticeSection}>
-              <h2 className={styles.noticeTitle}>
-                <FaExclamationCircle className={styles.noticeIcon} />
-                🔴 공지사항
-              </h2>
-              <div className={styles.noticeContent}>
-                <div className={styles.noticeItem}>
-                  <span className={styles.noticeNumber}>1</span>
-                  <p>1교시 원데이 클래스 의무 참석입니다.</p>
-                </div>
-                <div className={styles.noticeItem}>
-                  <span className={styles.noticeNumber}>2</span>
-                  <p>체험 재료비: 회당 5천원</p>
-                </div>
-                <div className={styles.noticeItem}>
-                  <span className={styles.noticeNumber}>3</span>
-                  <p>입금계좌: 카카오뱅크 3333-33-7846805 (예금주: 이미현)</p>
-                </div>
-                <div className={styles.noticeItem}>
-                  <span className={styles.noticeNumber}>4</span>
-                  <p>신청: 방문 또는 홈페이지 접수</p>
-                </div>
-              </div>
-            </div> */}
-
             <div className={styles.applySection}>
               <button className={styles.applyBtn} onClick={handleApply}>
                 신청하기
@@ -203,6 +204,7 @@ const ApplyPage = () => {
             </div>
           </div>
         </section>
+        */}
       </div>
 
       {/* Application Modal */}
