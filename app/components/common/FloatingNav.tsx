@@ -29,24 +29,24 @@ const FloatingNav = () => {
   };
 
   const quickMenuItems = [
-    { 
-      id: 1, 
-      name: '원앤온\n클래스', 
-      icon: '/downloads/quick_icon01.png', 
+    {
+      id: 1,
+      name: '클래스\n신청',
+      icon: '/downloads/quick_icon01.png',
       href: '/apply',
       color: '#FF6B6B'
     },
-    { 
-      id: 2, 
-      name: '프로그램\n안내', 
-      icon: '/downloads/quick_icon02.png', 
+    {
+      id: 2,
+      name: '프로그램\n안내',
+      icon: '/downloads/quick_icon02.png',
       href: '/program',
       color: '#4ECDC4'
     },
-    { 
-      id: 3, 
-      name: '공지\n사항', 
-      icon: '/downloads/quick_icon03.png', 
+    {
+      id: 3,
+      name: '공지\n사항',
+      icon: '/downloads/quick_icon03.png',
       href: '/notice/list',
       color: '#45B7D1'
     },
@@ -56,17 +56,17 @@ const FloatingNav = () => {
     <div className={`${styles.floatingNav} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.quickMenu}>
         {quickMenuItems.map((item) => (
-          <Link 
-            key={item.id} 
-            href={item.href} 
+          <Link
+            key={item.id}
+            href={item.href}
             className={styles.quickItem}
             style={{ '--item-color': item.color } as React.CSSProperties}
           >
             <div className={styles.iconWrapper}>
-              <img 
-                src={item.icon} 
-                alt={item.name} 
-                width={30} 
+              <img
+                src={item.icon}
+                alt={item.name}
+                width={30}
                 height={30}
               />
             </div>
@@ -74,8 +74,8 @@ const FloatingNav = () => {
           </Link>
         ))}
       </div>
-      
-      <button 
+
+      <button
         className={styles.topButton}
         onClick={scrollToTop}
         aria-label="맨 위로"

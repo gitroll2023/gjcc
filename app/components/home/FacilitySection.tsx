@@ -9,12 +9,12 @@ import styles from './FacilitySection.module.css';
 
 const FacilitySection = () => {
   const activities = [
-    {
-      id: 1,
-      name: 'One & On 클래스',
-      description: '원데이클래스 + 문화예술 통합 프로그램',
-      image: '/one&on.jpg',
-    },
+    // {
+    //   id: 1,
+    //   name: 'One & On 클래스',
+    //   description: '원데이클래스 + 문화예술 통합 프로그램',
+    //   image: '/one&on.jpg',
+    // },
     {
       id: 2,
       name: '공방 클래스',
@@ -45,7 +45,7 @@ const FacilitySection = () => {
     <section className={styles.section}>
       <div className={styles.inner}>
         <h3 className={styles.sectionTitle}>활동갤러리</h3>
-        
+
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
